@@ -1,4 +1,4 @@
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import './App.css';
 import IntroPage from './pages/IntroPage.js';
 import Settings from './pages/Settings.js';

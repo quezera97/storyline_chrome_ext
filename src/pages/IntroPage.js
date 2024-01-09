@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 import '../App.css';
 
@@ -17,7 +17,7 @@ function IntroPage() {
     };
 
     const handleClick = (value) => {
-        if(value == 'settings'){
+        if(value === 'settings'){
             navigate('/settings');
         }
     };

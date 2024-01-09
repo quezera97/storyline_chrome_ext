@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 import Text from '../components/Text.js';
 import Background from '../components/Background.js';
@@ -25,7 +25,7 @@ function Settings() {
   }; 
 
   const handleSubmit = (e) => {
-    if(e == 'exit'){
+    if(e === 'exit'){
       navigate('/');
     }
   }; 
