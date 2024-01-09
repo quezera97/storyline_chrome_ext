@@ -1,6 +1,6 @@
 import React from 'react';
 
-// function TitleText(props) {
+// function Text(props) {
 //     const { text, className } = props;
 
 //     return (
@@ -8,12 +8,12 @@ import React from 'react';
 //     );
 // }
 
-const TitleText = ({ text, className }) => {
+const Text = ({ text, className }) => {
     return (
-        <h1 className={className}>
+        <p className={className}>
             {text}
-        </h1>
+        </p>
     );
 };
 
-export default TitleText;
+export default Text;

@@ -6,7 +6,7 @@ const Button = styled.button`
     padding: 10px 20px;
     font-size: 25px;
     border: 2px solid #666;
-    background-color: #111;
+    background-color: ${(props) => props.backgroundcolor || '#111'};
     color: #fff;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -14,6 +14,7 @@ const Button = styled.button`
     margin-right: 5px;
     margin-left: 5px;
     text-transform: uppercase;
+    letter-spacing: 5px;
 
     &:hover {
         background-color: rgb(230, 61, 61);
@@ -32,13 +33,13 @@ const Button = styled.button`
     }
 `;
 
-const EerieButton = ({ onClick, value, text }) => {
+const EerieButton = ({ onClick, value, text, color }) => {
     const handleClick = (e) => {
-      onClick(e.target.dataset.value);
+      onClick(value);
     };
   
     return (
-      <Button onClick={handleClick} data-value={value}>
+      <Button onClick={handleClick} data-value={value} backgroundcolor={color}>
         {text}
       </Button>
     );

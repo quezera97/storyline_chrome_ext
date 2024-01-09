@@ -1,20 +1,14 @@
 import React from 'react';
+import {Routes, Route, useNavigate} from 'react-router-dom';
+
 import '../App.css';
-import backgroundImage from '../assets/img/intro.jpg';
-import TitleText from '../components/TitleText';
+
+import TitleText from '../components/Text';
 import EerieButton from '../components/EeerieButton';
+import Background from '../components/Background';
 
 function IntroPage() {
-    const divIntroStyle = {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        textAlign: 'center',
-    };
+    const navigate = useNavigate();
 
     const divOptionStyle = {
         display: 'flex',
@@ -23,19 +17,21 @@ function IntroPage() {
     };
 
     const handleClick = (value) => {
-        console.log(value);
+        if(value == 'settings'){
+            navigate('/settings');
+        }
     };
 
     return (
-        <div style={divIntroStyle}>
+        <Background backgroundImage={require('../assets/img/intro.jpg')}>
             <TitleText className="White-text Eerie-text Title-text" text="~ The ~"/>
             <TitleText className="Red-text Eerie-text Title-text" text="Mannequinn"/>
             
             <div style={divOptionStyle}>
                 <EerieButton onClick={handleClick} value="start" text={'Start'}/>
-                <EerieButton onClick={handleClick} value="option" text={'Option'}/>
+                <EerieButton onClick={handleClick} value="settings" text={'Settings'}/>
             </div>
-        </div>
+        </Background>
     );
 }
 

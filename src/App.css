@@ -5,6 +5,7 @@
 .White-text {
   color: white;
 }
+
 .Red-text {
   color: red;
 }
@@ -20,6 +21,38 @@
 }
 
 .Subtitle-text {
-  font-size: 30px;
+  font-size: 50px;
   letter-spacing: 20px;
+}
+
+.Normal-text {
+  font-size: 35px;
+  letter-spacing: 8px;
+}
+
+
+.Eerie-range {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 50%;
+  height: 20px;
+  background: #2e2e2e;
+  outline: none;
+  border: white solid 3px;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.Eerie-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff0000;
+  cursor: pointer;
 }
