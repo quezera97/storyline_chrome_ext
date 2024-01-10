@@ -6,6 +6,8 @@ import Background from '../components/Background.js';
 import EerieButton from '../components/EeerieButton.js';
 import BreakLine from '../components/BreakLine.js';
 
+// import '../assets/css/ResponsiveText.css'
+
 function Settings() {
   const navigate = useNavigate();
   
@@ -31,7 +33,7 @@ function Settings() {
   }; 
 
   return (
-    <Background backgroundImage={require('../assets/img/intro2.jpg')}>
+    <Background backgroundImage={require('../assets/img/settings-background.jpg')}>
       <Text className="White-text Eerie-text Title-text" text="Settings"/>
       <Text className="White-text Eerie-text Normal-text" text="Music volume"/>
       <Text className="Red-text Eerie-text Subtitle-text" text={musicValue}/>
@@ -50,7 +52,7 @@ function Settings() {
         <EerieButton onClick={handleClickSubtitle} value="on" text={'ON'} color={onButtonColor} />
         <EerieButton onClick={handleClickSubtitle} value="off" text={'OFF'} color={offButtonColor} />
       </div>
-      <BreakLine quantity={5}/>
+      <BreakLine quantity={3}/>
       <div>
         <EerieButton onClick={handleSubmit} value="save" text={'SAVE'}/>
         <EerieButton onClick={handleSubmit} value="exit" text={'EXIT'}/>

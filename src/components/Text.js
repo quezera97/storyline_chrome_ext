@@ -10,9 +10,9 @@ import React from 'react';
 
 const Text = ({ text, className }) => {
     return (
-        <p className={className}>
+        <h6 className={className}>
             {text}
-        </p>
+        </h6>
     );
 };
 

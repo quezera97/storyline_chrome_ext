@@ -5,11 +5,12 @@ const Background = ({ backgroundImage, children }) => {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
+    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
+    overflow: 'hidden',
   };
 
   return <div style={divBackgroundStyle}>{children}</div>;

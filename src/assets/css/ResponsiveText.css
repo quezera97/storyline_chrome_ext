@@ -1,0 +1,89 @@
+/* 360p */
+@media screen and (max-width: 640px) and (max-height: 360px) {
+  .Title-text {
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+
+  .Subtitle-text {
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+
+  .Normal-text {
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+}
+
+/* 480p */
+@media screen and (min-width: 641px) and (max-width: 854px) and (max-height: 480px) {
+  .Title-text {
+    font-size: 54px;
+    letter-spacing: 13.5px;
+  }
+
+  .Subtitle-text {
+    font-size: 40.5px;
+    letter-spacing: 13.5px;
+  }
+
+  .Normal-text {
+    font-size: 27px;
+    letter-spacing: 13.5px;
+  }
+}
+
+/* 720p */
+@media screen and (min-width: 855px) and (max-width: 1280px) and (max-height: 720px) {
+  .Title-text {
+    font-size: 80px;
+    letter-spacing: 20px;
+  }
+
+  .Subtitle-text {
+    font-size: 60px;
+    letter-spacing: 20px;
+  }
+
+  .Normal-text {
+    font-size: 40px;
+    letter-spacing: 20px;
+  }
+}
+
+/* 1080p */
+@media screen and (min-width: 1281px) and (max-width: 1920px) and (max-height: 1080px) {
+  .Title-text {
+    font-size: 120px;
+    letter-spacing: 30px;
+  }
+
+  .Subtitle-text {
+    font-size: 90px;
+    letter-spacing: 30px;
+  }
+
+  .Normal-text {
+    font-size: 60px;
+    letter-spacing: 30px;
+  }
+}
+
+/* 1440p */
+@media screen and (min-width: 1921px) and (max-width: 2560px) and (max-height: 1440px) {
+  .Title-text {
+    font-size: 160px;
+    letter-spacing: 40px;
+  }
+
+  .Subtitle-text {
+    font-size: 120px;
+    letter-spacing: 40px;
+  }
+
+  .Normal-text {
+    font-size: 80px;
+    letter-spacing: 40px;
+  }
+}

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 const Button = styled.button`
     font-family: 'Creepster', cursive;
+    width: auto;
+    height: auto;
     padding: 10px 20px;
     font-size: 25px;
     border: 2px solid #666;
@@ -31,6 +33,7 @@ const Button = styled.button`
     &:active {
         transform: scale(0.95);
     }
+
 `;
 
 const EerieButton = ({ onClick, value, text, color }) => {

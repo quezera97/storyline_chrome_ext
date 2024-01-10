@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.Margin-top-5 {
+  margin-top: 5%;
+}
+.Margin-top-10 {
+  margin-top: 10%;
+}
+
 .White-text {
   color: white;
 }
@@ -18,11 +25,13 @@
 .Title-text {
   font-size: 70px;
   letter-spacing: 50px;
+  margin-top: 5%;
 }
 
 .Subtitle-text {
   font-size: 50px;
   letter-spacing: 20px;
+  margin-top: 1%;
 }
 
 .Normal-text {
