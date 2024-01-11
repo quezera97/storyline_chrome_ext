@@ -26,9 +26,11 @@ function Character() {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    if(e === 'exit'){
-      navigate('/');
+    if(e === 'choose') {
+      console.log('choose luh');  
     }
+    
+    navigate('/');
   };
 
   return (
@@ -69,7 +71,7 @@ function Character() {
       </Swiper>
       <BreakLine quantity={3}/>
       <div>
-        <EerieButton onClick={handleSubmit} value="save" text={'SAVE'}/>
+        <EerieButton onClick={handleSubmit} value="choose" text={'CHOOSE'}/>
         <EerieButton onClick={handleSubmit} value="exit" text={'EXIT'}/>
       </div>
     </Background>

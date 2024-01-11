@@ -46,12 +46,12 @@
     -->
     <script>
       function checkZoomLevel() {
-        var minHeight = 640;
-        var minWidth = 640;
+        var minHeight = 480;
+        var minWidth = 1080;
 
-        var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-        var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-
+        var vw = Math.max(window.innerWidth || 0);
+        var vh = Math.max(window.innerHeight || 0);
+        
         if (vw < minWidth || vh < minHeight) {
           window.location.href = 'error.html';
         }

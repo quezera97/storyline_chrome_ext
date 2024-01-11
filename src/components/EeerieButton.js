@@ -6,7 +6,7 @@ const Button = styled.button`
     width: auto;
     height: auto;
     padding: 10px 20px;
-    font-size: 25px;
+    font-size: 4vh;
     border: 2px solid #666;
     background-color: ${(props) => props.backgroundcolor || '#111'};
     color: #fff;

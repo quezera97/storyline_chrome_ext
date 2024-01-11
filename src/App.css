@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .Margin-top-5 {
@@ -23,22 +26,37 @@
 }
 
 .Title-text {
-  font-size: 70px;
+  font-size: 10vh;
   letter-spacing: 50px;
   margin-top: 5%;
 }
 
 .Subtitle-text {
-  font-size: 50px;
+  font-size: 7vh;
   letter-spacing: 20px;
   margin-top: 1%;
 }
 
 .Normal-text {
-  font-size: 35px;
+  font-size: 5vh;
   letter-spacing: 8px;
 }
 
+.Table-In-Settings {
+  width:50%!important;
+  background-color: rgba(0, 0, 0, 0);
+  --bs-table-color:#fff;
+  --bs-table-bg:#212529;
+  --bs-table-border-color:#4d5154;
+  --bs-table-striped-bg:#2c3034;
+  --bs-table-striped-color:#fff;
+  --bs-table-active-bg:#373b3e;
+  --bs-table-active-color:#fff;
+  --bs-table-hover-bg:#323539;
+  --bs-table-hover-color:#fff;
+  color:var(--bs-table-color);
+  border-color:var(--bs-table-border-color)
+}
 
 .Eerie-range {
   appearance: none;
