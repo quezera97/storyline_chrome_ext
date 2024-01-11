@@ -35,6 +35,7 @@ function Settings() {
   return (
     <Background backgroundImage={require('../assets/img/settings-background.jpg')}>
       <Text className="White-text Eerie-text Title-text" text="Settings"/>
+      <BreakLine quantity={2}/>
       <Text className="White-text Eerie-text Normal-text" text="Music volume"/>
       <Text className="Red-text Eerie-text Subtitle-text" text={musicValue}/>
       <input

@@ -19,8 +19,20 @@ function IntroPage() {
     };
 
     const handleClick = (value) => {
-        if(value === 'settings'){
-            navigate('/settings');
+        switch (value) {
+            case 'start':
+                // navigate('/start');
+                break;
+            case 'settings':
+                navigate('/settings');
+                break;
+            case 'character':
+                navigate('/character');
+                break;
+        
+            default:
+                navigate('/');
+                break;
         }
     };
 
@@ -32,6 +44,7 @@ function IntroPage() {
             <div style={divOptionStyle}>
                 <EerieButton onClick={handleClick} value="start" text={'Start'}/>
                 <EerieButton onClick={handleClick} value="settings" text={'Settings'}/>
+                <EerieButton onClick={handleClick} value="character" text={'Caharacter'}/>
             </div>
         </Background>
     );
