@@ -44,7 +44,7 @@ function IntroPage() {
             <div style={divOptionStyle}>
                 <EerieButton onClick={handleClick} value="start" text={'Start'}/>
                 <EerieButton onClick={handleClick} value="settings" text={'Settings'}/>
-                <EerieButton onClick={handleClick} value="character" text={'Caharacter'}/>
+                <EerieButton onClick={handleClick} value="character" text={'Character'}/>
             </div>
         </Background>
     );
