@@ -1,6 +1,5 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-
 import '../App.css';
 
 import TitleText from '../components/Text';
@@ -18,10 +17,9 @@ function IntroPage() {
         textAlign: 'center',
     };
 
-    const handleClick = (value) => {
+    const handleClick = async (value) => {
         switch (value) {
             case 'start':
-                console.log('start luh');
                 break;
             case 'settings':
                 navigate('/settings');

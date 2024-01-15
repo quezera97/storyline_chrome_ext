@@ -36,13 +36,13 @@ const Button = styled.button`
 
 `;
 
-const EerieButton = ({ onClick, value, text, color }) => {
+const EerieButton = ({ onClick, value, text, color, ...restProps }) => {
     const handleClick = (e) => {
       onClick(value);
     };
   
     return (
-      <Button onClick={handleClick} data-value={value} backgroundcolor={color}>
+      <Button onClick={handleClick} data-value={value} backgroundcolor={color} {...restProps}>
         {text}
       </Button>
     );

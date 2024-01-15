@@ -5,12 +5,14 @@ import Text from '../components/Text.js';
 import Background from '../components/Background.js';
 import EerieButton from '../components/EeerieButton.js';
 import BreakLine from '../components/BreakLine.js';
+import ConfirmationDialog from '../components/ConfirmationDialog.js';
 
 function Settings() {
   const navigate = useNavigate();
   
   const [musicValue, setMusicValue] = useState(100);
   const [subtitle, setSubtitle] = useState('on');
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const onButtonColor = subtitle === 'on' ? 'rgb(230, 61, 61)' : '#111';
   const offButtonColor = subtitle === 'off' ? 'rgb(230, 61, 61)' : '#111';
@@ -24,22 +26,40 @@ function Settings() {
     setSubtitle(newSubtitle);
   }; 
 
-  const handleSubmit = (e) => {
-    if(e === 'save'){
-      console.log('save luh');
+  const handleSubmitSettings = (e) => {
+    if (e === 'save') {
+      setShowConfirmation(true);
+    } else if (e === 'exit') {
+      navigate('/');
+    }
+  };
+
+  const handleConfirmDialog = (confirmed) => {
+    if (confirmed) {
+      navigate('/');
     }
 
-    navigate('/');
-  }; 
+    setShowConfirmation(false);
+  };
+
+
 
   return (
     <Background backgroundImage={require('../assets/img/settings-background.jpg')}>
+
+      <ConfirmationDialog
+        isOpen={showConfirmation}
+        message="Are you sure you want to save?"
+        onConfirm={() => handleConfirmDialog(true)}
+        onCancel={() => handleConfirmDialog(false)}
+      />
+
       <Text className="White-text Eerie-text Title-text" text="Settings"/>
       <BreakLine quantity={1}/>
       <table className='Table-In-Settings'>
         <thead>
           <tr>
-            <th scope="col"><Text className="White-text Eerie-text Normal-text" text="Music volume"/></th>
+            <th scope="col"><Text className="White-text Eerie-text Normal-text" text="Music"/></th>
             <th scope="col"><Text className="White-text Eerie-text Normal-text" text="Subtitle"/></th>
           </tr>
         </thead>
@@ -66,8 +86,8 @@ function Settings() {
       </table>
       <BreakLine quantity={3}/>
       <div>
-        <EerieButton onClick={handleSubmit} value="save" text={'SAVE'}/>
-        <EerieButton onClick={handleSubmit} value="exit" text={'EXIT'}/>
+        <EerieButton onClick={handleSubmitSettings} value="save" text={'SAVE'}/>
+        <EerieButton onClick={handleSubmitSettings} value="exit" text={'EXIT'}/>
       </div>
     </Background>
   );

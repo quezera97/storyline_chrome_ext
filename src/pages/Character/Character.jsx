@@ -11,16 +11,17 @@ import "./styles.css";
 import arrowLeft from "./assets/arrow-left.svg";
 import arrowRight from "./assets/arrow-right.svg";
 
-import easy from "./assets/easy_character.jpg";
-import medium from "./assets/medium_character.jpg";
-import hard from "./assets/hard_character.jpg";
-import hell from "./assets/hell_character.jpg";
 import Background from "../../components/Background.js";
 import TitleText from '../../components/Text.js';
 import EerieButton from "../../components/EeerieButton.js";
 import BreakLine from "../../components/BreakLine.js";
 
-const slides = [easy, medium, hard, hell];
+import joyBoy from "./assets/joyBoy.jpg";
+import theSister1 from "./assets/theSister1.jpg";
+import theExecutioner from "./assets/theExecutioner.jpg";
+import theSister2 from "./assets/theSister2.jpg";
+
+const slides = [joyBoy, theSister1, theExecutioner, theSister2];
 
 function Character() {
   const navigate = useNavigate();
@@ -35,7 +36,8 @@ function Character() {
 
   return (
     <Background backgroundImage={require('./assets/character_backgorund.jpg')}>
-      <TitleText className="White-text Eerie-text Subtitle-text" text="Choose Your Character"/>
+      <BreakLine quantity={3}/>
+      <TitleText className="White-text Eerie-text Subtitle-text" text="Choose Your Caharcter's Story"/>
       <Swiper
         modules={[EffectCoverflow, Navigation, Pagination]}
         navigation={{

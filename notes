@@ -1,0 +1,9 @@
+<!-- If you're using Create React App (CRA), the configuration is abstracted away, and you don't directly manage a webpack.config.js. In this case, you can use the craco package (Create React App Configuration Override) to customize your webpack configuration without ejecting from CRA.
+
+at package.json - scripts in package.json to use craco instead of react-scripts
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+}, -->
