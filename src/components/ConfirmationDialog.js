@@ -33,10 +33,10 @@ const ConfirmationDialog = ({ isOpen, message, onConfirm, onCancel }) => {
       style={customModalStyle}
       shouldCloseOnOverlayClick={false}
     >
-      <Background backgroundImage={require('../assets/img/confimration-dialog-background.jpg')}>
+      <Background backgroundImage={require('../assets/img/confirmation-dialog-background.jpg')}>
         <div>
               <p className="White-text Eerie-text Normal-text">{message}</p>
-              <BreakLine quantity={2}/>
+              <BreakLine quantity={1}/>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
                 <EerieButton onClick={onConfirm} value="confirm" text="Confirm" />
                 <BreakLine quantity={1}/>

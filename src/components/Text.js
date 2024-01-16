@@ -1,5 +1,3 @@
-import React from 'react';
-
 // function Text(props) {
 //     const { text, className } = props;
 

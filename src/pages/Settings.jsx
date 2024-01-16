@@ -42,8 +42,6 @@ function Settings() {
     setShowConfirmation(false);
   };
 
-
-
   return (
     <Background backgroundImage={require('../assets/img/settings-background.jpg')}>
 

@@ -7,7 +7,7 @@ import EerieButton from '../components/EeerieButton';
 import Background from '../components/Background';
 import BreakLine from '../components/BreakLine';
 
-function IntroPage() {
+function Dashboard() {
     const navigate = useNavigate();
 
     const divOptionStyle = {
@@ -20,6 +20,7 @@ function IntroPage() {
     const handleClick = async (value) => {
         switch (value) {
             case 'start':
+                navigate('/the_sister_1/intro');
                 break;
             case 'settings':
                 navigate('/settings');
@@ -47,4 +48,4 @@ function IntroPage() {
     );
 }
 
-export default IntroPage;
+export default Dashboard;
