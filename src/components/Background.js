@@ -1,18 +1,6 @@
-import {useEffect} from 'react';
+import React from 'react';
 
 const Background = ({ backgroundImage, children }) => {
-  const preloadImage = () => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = backgroundImage;
-    document.head.appendChild(link);
-  };
-
-  useEffect(() => {
-    preloadImage();
-  }, [backgroundImage, preloadImage]);
-
   const divBackgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
@@ -26,7 +14,11 @@ const Background = ({ backgroundImage, children }) => {
     overflow: 'hidden',
   };
 
-  return <div style={divBackgroundStyle}>{children}</div>;
+  return (
+    <div style={divBackgroundStyle}>
+      {children}
+    </div>
+  )
 };
 
 export default Background;

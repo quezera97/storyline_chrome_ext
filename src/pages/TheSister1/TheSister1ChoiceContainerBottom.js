@@ -2,8 +2,12 @@ import { useState } from 'react';
 import Background from '../../components/Background.js';
 import {RadioGroup, RadioButton} from '../../components/RadioButton.js'
 
-const TheSister1ChoiceContainerBottom = ({ image }) => {
+const TheSister1ChoiceContainerBottom = ({ image, text, value, hidden, onChoiceSelect }) => {
     const [currentPartIndex] = useState(0);
+    const handleChoiceSelect = (selectedValue) => {
+        // Call the provided callback function when a choice is selected
+        onChoiceSelect(selectedValue);
+    };
 
     const blackContainerStyle = {
         position: 'absolute',
@@ -20,10 +24,10 @@ const TheSister1ChoiceContainerBottom = ({ image }) => {
     return (
         <Background backgroundImage={require(`./img/${image[currentPartIndex]}`)}>
             <div style={blackContainerStyle}>
-                <RadioGroup>
-                    <RadioButton value="option1" label="Option 1" />
-                    <RadioButton value="option2" label="Option 2" />
-                    <RadioButton value="option3" label="Option 3" />
+                <RadioGroup onSelectedChoice={handleChoiceSelect}>
+                    <RadioButton value={value[0]} label={text[0]} hidden={hidden[0]}/>
+                    <RadioButton value={value[1]} label={text[1]} hidden={hidden[1]}/>
+                    <RadioButton value={value[2]} label={text[2]} hidden={hidden[2]}/>
                 </RadioGroup>
             </div>
         </Background>

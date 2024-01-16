@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-const RadioGroup = ({ children }) => {
+const RadioGroup = ({ children, onSelectedChoice }) => {
     const [selectedValue, setSelectedValue] = useState(null);
   
     const handleRadioChange = (value) => {
       setSelectedValue(value);
+      onSelectedChoice(value);
     };
   
     return (
@@ -19,12 +20,14 @@ const RadioGroup = ({ children }) => {
     );
   };
   
-  const RadioButton = ({ value, label, selected, onChange }) => {
+  const RadioButton = ({ value, label, hidden, selected, onChange }) => {
     return (
-      <label>
-        <input type="radio" value={value} checked={selected} onChange={onChange} />
-        {label}
-      </label>
+      <div style={{ margin: '10px 0' }}>
+        <label style={{ display: 'block' }}>
+          <input type="radio" value={value} checked={selected} onChange={onChange} hidden={hidden}/>
+          {hidden ? null : label}
+        </label>
+      </div>
     );
   };
 
