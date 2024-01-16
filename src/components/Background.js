@@ -11,7 +11,7 @@ const Background = ({ backgroundImage, children }) => {
 
   useEffect(() => {
     preloadImage();
-  }, [backgroundImage]);
+  }, [backgroundImage, preloadImage]);
 
   const divBackgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
