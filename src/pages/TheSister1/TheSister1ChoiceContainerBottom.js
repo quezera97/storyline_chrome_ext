@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Background from '../../components/Background.js';
 import {RadioGroup, RadioButton} from '../../components/RadioButton.js'
-import EerieButton from '../../components/EeerieButton.js';
 
 const TheSister1ChoiceContainerBottom = ({ image, imageIndex, text, value, hidden, onChoiceSelect }) => {
     const [currentPartIndex, setCurrentPartIndex] = useState(0);

@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-// import {useNavigate} from 'react-router-dom';
 import Background from '../../components/Background';
-// import EerieButton from '../../components/EeerieButton';
 
 const TheSister1TextBottomContainer = ({ text, onTextComplete, image }) => {
-  // const navigate = useNavigate();
   const [storyParts, setStoryParts] = useState([]);
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
 
@@ -37,7 +34,6 @@ const TheSister1TextBottomContainer = ({ text, onTextComplete, image }) => {
   
   return (
     <Background backgroundImage={require(`./img/${image[currentPartIndex]}`)}>
-        {/* <EerieButton onClick={handleClick} value="exit" text={'Exit'}/> */}
         <div style={blackContainerStyle} onClick={handleContainerClick}>
           <p>{storyParts[currentPartIndex]}</p>
         </div>
