@@ -17,7 +17,7 @@ function Dashboard() {
         textAlign: 'center',
     };
 
-    const handleClick = async (value) => {
+    const handleClick = (value) => {
         switch (value) {
             case 'start':
                 navigate('/the_sister_1/intro');

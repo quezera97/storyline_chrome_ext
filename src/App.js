@@ -8,6 +8,7 @@ import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css"; 
 import 'primeflex/primeflex.css';
+import GiveFood from './pages/TheSister1/FirstChoice/GiveFood/GiveFood.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/character" element={<Character />} />
             <Route path="/the_sister_1/intro" element={<IntroTheSister1 />} />
+            <Route path="/the_sister_1/give_food" element={<GiveFood />} />
         </Routes>
       </div>
   );

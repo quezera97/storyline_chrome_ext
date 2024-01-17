@@ -1,33 +1,41 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
+import "../../App.css"
 import TheSister1TextBottomContainer from './TheSister1TextBottomContainer';
 import TheSister1ChoiceContainerBottom from './TheSister1ChoiceContainerBottom';
+import EerieButton from '../../components/EeerieButton';
 
 function IntroTheSister1() {
+  const navigate = useNavigate();
   const [showChoices, setShowChoices] = useState(false);
+  const [valueChoices, setValueChoices] = useState('');
+  const [currentPartIndex, setCurrentPartIndex] = useState(0);
 
   const scene1 = 'Once upon a time, there was a homeless and poor girl asking for food on the streets';
-  const scene2 = 'Everytime she asks, all of them rejected her';
-  const scene3 = 'But one day, she accidently bumped into a rich-looking person in a suit';
-  const scene4 = 'She asks him a bread as she was very hungry';
+  const scene2 = 'Everytime she asks, all of them refuse to give her anything';
+  const scene3 = 'But one day, she accidently bumped into a rich-looking person in a suit & asks him a bread as she was very hungry';
 
-  const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4;
+  const storyText = scene1 + '\n' + scene2 + '\n' + scene3;
 
   const imageBackgrounds = [
     'ask_food.jpg',
-    'looking_for_food.jpg',
-    'ask_food.jpg',
-    'looking_for_food.jpg',
-    'ask_food.jpg', //scene 5 (option)
+    'people_refuse.jpg',
+    'bump_person.jpg',
+    //scene option
+    'person_give_food.jpg',
+    'person_push.jpg',
   ];
 
   const choiceText = [
-    'Give food',
-    'How Give food',
+    'Give a piece of bread',
+    'Push her away',
   ]
+
   const valueChoice = [
-    'Give food',
-    'How Give food',
+    'give',
+    'refuse',
   ]
+
   const hiddenChoice = [
     false,
     false,
@@ -35,20 +43,46 @@ function IntroTheSister1() {
   ]
 
   const handleChoiceSelect = (selectedValue) => {
-    console.log(`User selected: ${selectedValue}`);
+    setValueChoices(selectedValue);
   };
 
-  const handleTextComplete = () => {
+  const handleTextComplete = (currentPartIndex) => {
+    setCurrentPartIndex(currentPartIndex);
     setShowChoices(true);
   };
 
+  const exitToDashboard = (e) => {
+    navigate('/');
+  }
+
+  
+  const submitChoice = () => {
+    switch (valueChoices) {
+      case 'give':
+        navigate('/the_sister_1/give_food');
+        break;
+      case 'refuse':
+        navigate('/the_sister_1/refuse_to_give');
+        break;
+      case '':
+        // Handle the case when valueChoices is empty
+        break;
+      default:
+        navigate('/');
+    }
+  };
+  
+
   return (
     <>
+      <EerieButton className="Z-index" onClick={exitToDashboard} value="exit" text={'X'}/>
+      {showChoices ? <EerieButton className="Button-choice" onClick={submitChoice} text={'Choose'}/> : null}
       {showChoices ? (
-        <TheSister1ChoiceContainerBottom image={imageBackgrounds} text={choiceText} value={valueChoice} hidden={hiddenChoice} onChoiceSelect={handleChoiceSelect}/>
-      ) : (
-        <TheSister1TextBottomContainer text={storyText} onTextComplete={handleTextComplete} image={imageBackgrounds}/>
-      )}
+        <TheSister1ChoiceContainerBottom image={imageBackgrounds} imageIndex={currentPartIndex} 
+          text={choiceText} value={valueChoice} hidden={hiddenChoice} onChoiceSelect={handleChoiceSelect}/>
+        ) : (
+          <TheSister1TextBottomContainer text={storyText} onTextComplete={handleTextComplete} image={imageBackgrounds}/>
+          )}
     </>
   );
 }

@@ -1,12 +1,31 @@
 import { useState } from 'react';
 import Background from '../../components/Background.js';
 import {RadioGroup, RadioButton} from '../../components/RadioButton.js'
+import EerieButton from '../../components/EeerieButton.js';
 
-const TheSister1ChoiceContainerBottom = ({ image, text, value, hidden, onChoiceSelect }) => {
-    const [currentPartIndex] = useState(0);
+const TheSister1ChoiceContainerBottom = ({ image, imageIndex, text, value, hidden, onChoiceSelect }) => {
+    const [currentPartIndex, setCurrentPartIndex] = useState(0);
+    const [imagePath, setImagePath] = useState(image[imageIndex]);
+
     const handleChoiceSelect = (selectedValue) => {
         // Call the provided callback function when a choice is selected
         onChoiceSelect(selectedValue);
+        switch (selectedValue) {
+            case 'give':
+                setImagePath('person_give_food.jpg');
+                break;
+            case 'refuse':
+                setImagePath('person_push.jpg');
+                break;
+            case 'accept':
+                setImagePath('accept_offer.jpg');
+                break;
+            case 'reject':
+                setImagePath('reject_offer.jpg');
+                break;
+            default:
+              setCurrentPartIndex(currentPartIndex);
+        }
     };
 
     const blackContainerStyle = {
@@ -22,13 +41,13 @@ const TheSister1ChoiceContainerBottom = ({ image, text, value, hidden, onChoiceS
     };
 
     return (
-        <Background backgroundImage={require(`./img/${image[currentPartIndex]}`)}>
+        <Background backgroundImage={require(`./img/${imagePath}`)}>
             <div style={blackContainerStyle}>
                 <RadioGroup onSelectedChoice={handleChoiceSelect}>
                     <RadioButton value={value[0]} label={text[0]} hidden={hidden[0]}/>
                     <RadioButton value={value[1]} label={text[1]} hidden={hidden[1]}/>
                     <RadioButton value={value[2]} label={text[2]} hidden={hidden[2]}/>
-                </RadioGroup>
+                </RadioGroup>                
             </div>
         </Background>
     )
