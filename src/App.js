@@ -4,10 +4,6 @@ import Dashboard from './pages/Dashboard.jsx';
 import Settings from './pages/Settings.jsx';
 import Character from './pages/Character/Character.jsx';
 import IntroTheSister1 from './pages/TheSister1/Intro.jsx';
-import "primereact/resources/themes/bootstrap4-light-blue/theme.css"; 
-import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css"; 
-import 'primeflex/primeflex.css';
 import GiveFood from './pages/TheSister1/FirstChoice/GiveFood/GiveFood.jsx';
 import AcceptOffer from './pages/TheSister1/FirstChoice/GiveFood/AcceptOffer/AcceptOffer.jsx';
 import Portfolio from './pages/Portfolio.jsx';
@@ -33,7 +29,7 @@ export default App;
 
 // You will be provided with code snippets and your task is to use these, plus any of your own code, to complete a portfolio app that contains:
 // A header with external links to social media accounts and internal links to other sections of the page. (done)
-// A landing section with an avatar picture and a short bio.
+// A landing section with an avatar picture and a short bio.(done)
 // A section to display your featured projects as cards in a grid fashion.
 // A contact me section with a form to allow visitors to contact you.
 

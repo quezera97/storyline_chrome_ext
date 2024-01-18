@@ -1,14 +1,14 @@
-// function Text(props) {
-//     const { text, className } = props;
+import React from 'react';
 
-//     return (
-//         <h1 className={className}>{text}</h1>
-//     );
-// }
+const Text = ({ text, className, style }) => {
+    const textStyle = {
+        whiteSpace: 'normal',
+        overflowWrap: 'break-word',
+        ...style,
+    };
 
-const Text = ({ text, className }) => {
     return (
-        <h6 className={className}>
+        <h6 className={className} style={textStyle}>
             {text}
         </h6>
     );
