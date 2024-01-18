@@ -3,11 +3,9 @@ import Background from '../../components/Background.js';
 import {RadioGroup, RadioButton} from '../../components/RadioButton.js'
 
 const TheSister1ChoiceContainerBottom = ({ image, imageIndex, text, value, hidden, onChoiceSelect }) => {
-    const [currentPartIndex, setCurrentPartIndex] = useState(0);
     const [imagePath, setImagePath] = useState(image[imageIndex]);
 
     const handleChoiceSelect = (selectedValue) => {
-        // Call the provided callback function when a choice is selected
         onChoiceSelect(selectedValue);
         switch (selectedValue) {
             case 'give':
@@ -23,7 +21,8 @@ const TheSister1ChoiceContainerBottom = ({ image, imageIndex, text, value, hidde
                 setImagePath('reject_offer.jpg');
                 break;
             default:
-              setCurrentPartIndex(currentPartIndex);
+                setImagePath('black_background.jpg');
+                break
         }
     };
 

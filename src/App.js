@@ -9,6 +9,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css"; 
 import 'primeflex/primeflex.css';
 import GiveFood from './pages/TheSister1/FirstChoice/GiveFood/GiveFood.jsx';
+import AcceptOffer from './pages/TheSister1/FirstChoice/GiveFood/AcceptOffer/AcceptOffer.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/character" element={<Character />} />
             <Route path="/the_sister_1/intro" element={<IntroTheSister1 />} />
             <Route path="/the_sister_1/give_food" element={<GiveFood />} />
+            <Route path="/the_sister_1/accept_offer" element={<AcceptOffer />} />
         </Routes>
       </div>
   );

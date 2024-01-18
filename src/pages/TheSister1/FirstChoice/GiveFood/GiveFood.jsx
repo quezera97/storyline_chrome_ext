@@ -53,7 +53,7 @@ function GiveFood() {
 
   const submitChoice = () => {
     if(valueChoices === 'accept'){
-      navigate('/the_sister_1/first_choice');
+      navigate('/the_sister_1/accept_offer');
     }
   }
 
