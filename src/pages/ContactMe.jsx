@@ -49,7 +49,7 @@ function ContactMe() {
     return (
         <Background backgroundImage={require('../assets/img/contact_me_background.jpg')}>
             {isAlertOpen && (
-                <AlertDialog isOpen={true} message={alertMessage} onCancel={handleAlertCancel} />
+                <AlertDialog isOpen={isAlertOpen} message={alertMessage} onCancel={handleAlertCancel} />
             )}
             <BreakLine quantity={1}/>
             <TitleText className="White-text Eerie-text Subtitle-text" text="Contact Me"/>

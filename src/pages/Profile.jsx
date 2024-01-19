@@ -7,6 +7,7 @@ import InputText from '../components/InputText.js';
 import { FaEdit } from 'react-icons/fa';
 import ClickableIcon from '../components/ClickableIcon.js';
 import EerieButton from '../components/EeerieButton.js';
+import profilePicture from '../assets/img/icon.jpg';
 
 function Profile() {
 
@@ -37,10 +38,11 @@ function Profile() {
         setEditingField(null);
     };
 
+
     return (
         <Background backgroundImage={require('../assets/img/portfolio_background.jpg')}>
             <BreakLine quantity={1}/>
-            <ProfilePicture/>
+            <ProfilePicture imageUrl={profilePicture}/>
             <BreakLine quantity={1}/>
             <div style={{ display: 'flex', alignItems: 'center' }}>
                 {editingField === 'username' ? (
