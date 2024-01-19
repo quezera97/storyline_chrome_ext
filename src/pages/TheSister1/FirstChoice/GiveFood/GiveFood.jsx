@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import "../../../../App.css"
 import TheSister1TextBottomContainer from '../../TheSister1TextBottomContainer';
 import TheSister1ChoiceContainerBottom from '../../TheSister1ChoiceContainerBottom';
 import EerieButton from '../../../../components/EeerieButton';
@@ -60,7 +59,7 @@ function GiveFood() {
   return (
     <>
       <div>
-        <EerieButton className="Z-index" onClick={handleClick} value="exit" text={'X'}/>
+        <EerieButton className="Z-index-topLeft" onClick={handleClick} value="exit" text={'X'}/>
         {showChoices ? <EerieButton className="Button-choice" onClick={submitChoice} text={'Choose'}/> : null}
       </div>
       {showChoices ? (

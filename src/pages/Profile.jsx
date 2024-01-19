@@ -4,7 +4,6 @@ import ProfilePicture from '../components/ProfilePicture.js';
 import TitleText from '../components/Text.js';
 import BreakLine from '../components/BreakLine.js';
 import InputText from '../components/InputText.js';
-import '../App.css';
 import { FaEdit } from 'react-icons/fa';
 import ClickableIcon from '../components/ClickableIcon.js';
 import EerieButton from '../components/EeerieButton.js';
@@ -47,7 +46,7 @@ function Profile() {
                 {editingField === 'username' ? (
                     <>
                         <InputText
-                            type="text"
+                            type="input"
                             value={username}
                             onChange={handleInputChange}
                             width={'30vw'}

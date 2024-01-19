@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import "../../App.css"
 import TheSister1TextBottomContainer from './TheSister1TextBottomContainer';
 import TheSister1ChoiceContainerBottom from './TheSister1ChoiceContainerBottom';
 import EerieButton from '../../components/EeerieButton';
@@ -75,7 +74,7 @@ function IntroTheSister1() {
 
   return (
     <>
-      <EerieButton className="Z-index" onClick={exitToDashboard} value="exit" text={'X'}/>
+      <EerieButton className="Z-index-topLeft" onClick={exitToDashboard} value="exit" text={'X'}/>
       {showChoices ? <EerieButton className="Button-choice" onClick={submitChoice} text={'Choose'}/> : null}
       {showChoices ? (
         <TheSister1ChoiceContainerBottom image={imageBackgrounds} imageIndex={currentPartIndex} 

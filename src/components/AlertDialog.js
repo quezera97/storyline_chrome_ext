@@ -11,6 +11,7 @@ const customModalStyle = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '50%',
+    height: '30%',
     padding: '20px',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -21,31 +22,28 @@ const customModalStyle = {
   },
 };
 
-const ConfirmationDialog = ({ isOpen, message, onConfirm, onCancel }) => {
+const AlertDialog = ({ isOpen, message, onCancel }) => {
   return (
     
 
     <Modal
       isOpen={isOpen}
       onRequestClose={onCancel}
-      contentLabel="Confirmation Dialog"
+      contentLabel="Alert Dialog"
       style={customModalStyle}
       shouldCloseOnOverlayClick={false}
     >
-      <Background backgroundImage={require('../assets/img/confirmation-dialog-background.jpg')}>
+      <Background backgroundImage={require('../assets/img/alert_dialog_background.jpg')}>
         <div>
-              <p className="White-text Eerie-text Normal-text">{message}</p>
-              <BreakLine quantity={1}/>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
-                <EerieButton onClick={onConfirm} value="confirm" text="Confirm" />
-                <BreakLine quantity={1}/>
-                <EerieButton onClick={onCancel} value="cancel" text="Cancel" />
-              </div>
-
+            <p className="White-text Eerie-text Normal-text">{message}</p>
+            <BreakLine quantity={1}/>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'end' }}>
+              <EerieButton onClick={onCancel} text="Close" />
+            </div>
         </div>
       </Background>
     </Modal>
   );
 };
 
-export default ConfirmationDialog;
+export default AlertDialog;

@@ -8,9 +8,9 @@ const Text = ({ text, className, style }) => {
     };
 
     return (
-        <h6 className={className} style={textStyle}>
+        <p className={className} style={textStyle}>
             {text}
-        </h6>
+        </p>
     );
 };
 

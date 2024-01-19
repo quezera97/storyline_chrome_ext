@@ -1,7 +1,6 @@
 import Background from '../components/Background.js';
 import BreakLine from '../components/BreakLine.js';
 import TitleText from '../components/Text';
-import '../App.css';
 
 
 function Project() {

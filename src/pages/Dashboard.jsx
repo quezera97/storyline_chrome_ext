@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../App.css';
 
 import TitleText from '../components/Text';
 import EerieButton from '../components/EeerieButton';
