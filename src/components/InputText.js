@@ -6,7 +6,7 @@ const Input = styled.input`
     width: ${(props) => props.width || 'auto'};
     height: ${(props) => props.height || 'auto'};
     padding: 10px 20px;
-    font-size: 4vh;
+    font-size: 3vh;
     border: 2px solid #666;
     background-color: ${(props) => props.backgroundcolor || '#111'};
     color: #fff;
@@ -29,10 +29,11 @@ const Input = styled.input`
     }
 `;
 
-const EerieInput = ({ type, value, onChange, color, height, width, maxlength, ...restProps }) => {
+const EerieInput = ({ type, placeholder, value, onChange, color, height, width, maxlength, ...restProps }) => {
     return (
         <Input
-            as={type === 'text-area' ? 'textarea' : 'input'}
+            as={type}
+            placeholder={placeholder}
             value={value}
             onChange={onChange}
             backgroundcolor={color}

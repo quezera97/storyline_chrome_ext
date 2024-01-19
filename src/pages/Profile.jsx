@@ -9,7 +9,7 @@ import { FaEdit } from 'react-icons/fa';
 import ClickableIcon from '../components/ClickableIcon.js';
 import EerieButton from '../components/EeerieButton.js';
 
-function Portfolio() {
+function Profile() {
 
     const [username, setUsername] = useState('Click Icon To Edit Username');
     const [shortBio, setShortBio] = useState('Click Icon To Edit Short Bio');
@@ -17,9 +17,9 @@ function Portfolio() {
 
     const handleEdit = (field) => {
         if (field === 'username') {
-            setUsername('USERNAME');
+            setUsername(username);
         } else if (field === 'shortBio') {
-            setShortBio('SHORT BIO');
+            setShortBio(shortBio);
         }
         
         setEditingField(field);
@@ -41,7 +41,8 @@ function Portfolio() {
     return (
         <Background backgroundImage={require('../assets/img/portfolio_background.jpg')}>
             <BreakLine quantity={1}/>
-            <ProfilePicture className={'Z-index'}/>
+            <ProfilePicture/>
+            <BreakLine quantity={1}/>
             <div style={{ display: 'flex', alignItems: 'center' }}>
                 {editingField === 'username' ? (
                     <>
@@ -49,7 +50,7 @@ function Portfolio() {
                             type="text"
                             value={username}
                             onChange={handleInputChange}
-                            width={'370px'}
+                            width={'30vw'}
                             maxlength={'20'}
                         />
                         <EerieButton onClick={handleSave} text={'SAVE'}/>
@@ -77,11 +78,11 @@ function Portfolio() {
                 {editingField === 'shortBio' ? (
                     <>
                         <InputText
-                            type="text-area"
+                            type="textarea"
                             value={shortBio}
                             onChange={handleInputChange}
-                            height={'320px'}
-                            width={'600px'}
+                            height={'40vh'}
+                            width={'30vw'}
                             maxlength={'250'}
                         />
                         <EerieButton onClick={handleSave} text={'SAVE'}/>
@@ -115,4 +116,4 @@ function Portfolio() {
     );
 }
 
-export default Portfolio;
+export default Profile;

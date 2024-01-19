@@ -6,20 +6,27 @@ import Character from './pages/Character/Character.jsx';
 import IntroTheSister1 from './pages/TheSister1/Intro.jsx';
 import GiveFood from './pages/TheSister1/FirstChoice/GiveFood/GiveFood.jsx';
 import AcceptOffer from './pages/TheSister1/FirstChoice/GiveFood/AcceptOffer/AcceptOffer.jsx';
-import Portfolio from './pages/Portfolio.jsx';
+import Profile from './pages/Profile.jsx';
+import Header from './components/Header.js';
+import ContactMe from './pages/ContactMe.jsx';
+import Project from './pages/Project.jsx';
+
 
 function App() {
   return (
     <div className="App">
+        <Header/>
         <Routes>
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/profile" element={<Profile/>} />
+            <Route path="/contact_me" element={<ContactMe/>} />
+            <Route path="/project" element={<Project/>} />
 
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/character" element={<Character />} />
-            <Route path="/the_sister_1/intro" element={<IntroTheSister1 />} />
-            <Route path="/the_sister_1/give_food" element={<GiveFood />} />
-            <Route path="/the_sister_1/accept_offer" element={<AcceptOffer />} />
+            <Route path="/" element={<Dashboard/>} />
+            <Route path="/settings" element={<Settings/>} />
+            <Route path="/character" element={<Character/>} />
+            <Route path="/the_sister_1/intro" element={<IntroTheSister1/>} />
+            <Route path="/the_sister_1/give_food" element={<GiveFood/>} />
+            <Route path="/the_sister_1/accept_offer" element={<AcceptOffer/>} />
         </Routes>
       </div>
   );
@@ -30,7 +37,7 @@ export default App;
 // You will be provided with code snippets and your task is to use these, plus any of your own code, to complete a portfolio app that contains:
 // A header with external links to social media accounts and internal links to other sections of the page. (done)
 // A landing section with an avatar picture and a short bio.(done)
-// A section to display your featured projects as cards in a grid fashion.
+// A section to display your featured projects as cards in a grid fashion. 
 // A contact me section with a form to allow visitors to contact you.
 
 // Review the final project
