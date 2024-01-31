@@ -9,6 +9,8 @@ import BreakLine from '../components/BreakLine';
 function Dashboard() {
     const navigate = useNavigate();
 
+    const urlFeedback = 'https://docs.google.com/forms/d/e/1FAIpQLSdizHVo2yp_zpEZM2EN1iRQPB3B6yanaTAPeTrk2vJkq95bqw/viewform?usp=sf_link';
+
     const divOptionStyle = {
         display: 'flex',
         flexDirection: 'row',
@@ -27,6 +29,9 @@ function Dashboard() {
             case 'character':
                 navigate('/character');
                 break;
+            case 'urlFeedback':
+                window.open(urlFeedback, '_blank');
+                break;
             default:
                 navigate('/');
                 break;
@@ -42,6 +47,7 @@ function Dashboard() {
                     <EerieButton onClick={handleClick} value="start" text={'Start'}/>
                     <EerieButton onClick={handleClick} value="settings" text={'Settings'}/>
                     <EerieButton onClick={handleClick} value="character" text={'Character'}/>
+                    <EerieButton onClick={handleClick} value="urlFeedback" text={'Feedback'}/>
                 </div>
             </Background>
     );
