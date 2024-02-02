@@ -18,15 +18,13 @@ function AcceptOffer() {
   const scene6 = 'One by one, the children brought out from the room';
   const scene7 = 'Rumors said that the plagues happened in the city were due to the children, who have been called the Children of the Witches';
   const scene8 = 'Because of that, the children are sacrificed to the false Gods';
-  const scene9 = 'As it happened, the girl and the other children watched the horrifying scene in fear from the room, knowing they would be next';
-  const scene10 = 'Suddenly, a group of knights stormed the place, killing the heretics';
-  const scene11 = 'While subjugating them, one of heretics throw a torch, resulting the place burned down';
-  const scene12 = 'All of heretics are dead, and some of the knights made out alive. Leaving the children locked in the room';
-  const scene13 = 'The fire spreading across the room. Some of the children already has been burnt';
+  const scene9 = 'Suddenly, a group of knights stormed the place, killing the heretics';
+  const scene10 = 'While subjugating them, one of heretics throw a torch, resulting the place burned down';
+  const scene11 = 'All of heretics are dead, and some of the knights made out alive. Leaving the children locked in the room';
 
   const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4 + '\n' + scene5 
                     + '\n' + scene6 + '\n' + scene7 + '\n' + scene8 + '\n' + scene9 + '\n' 
-                    + scene10 + '\n' + scene11 + '\n' + scene12 + '\n' + scene13;
+                    + scene10 + '\n' + scene11;
 
   const imageBackgrounds = [
     'show_house.jpg',
@@ -34,14 +32,11 @@ function AcceptOffer() {
     'fell_asleep.jpg',
     'black_background.jpg',
     'woke_up.jpg',
-    //scene6 - continue
     'brought_out.jpg',
     'rumors.jpg',
     'sacrificed.jpg',
-    'watch_the_scene.jpg',
     'knights_storm_in.jpg',
     'throw_torch.jpg',
-    'leave_children_with_fire.jpg',
     'fire_spread.jpg',
     //scene option
     'kick_door.jpg',
@@ -78,8 +73,8 @@ function AcceptOffer() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'scream'){
-      navigate('/the_sister_1/first_choice');
+    if(valueChoices === 'kick'){
+      navigate('/the_sister_1/kick_door');
     }
   }
 

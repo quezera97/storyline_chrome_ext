@@ -20,6 +20,12 @@ const TheSister1ChoiceContainerBottom = ({ image, imageIndex, text, value, hidde
             case 'reject':
                 setImagePath('reject_offer.jpg');
                 break;
+            case 'kick':
+                setImagePath('kick_door.jpg');
+                break;
+            case 'jump':
+                setImagePath('jump_room.jpg');
+                break;
             default:
                 setImagePath('black_background.jpg');
                 break

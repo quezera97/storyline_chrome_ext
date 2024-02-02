@@ -10,6 +10,7 @@ import Profile from './pages/Profile.jsx';
 import Header from './components/Header.js';
 import ContactMe from './pages/ContactMe.jsx';
 import Project from './pages/Project.jsx';
+import KickDoor from './pages/TheSister1/FirstChoice/GiveFood/AcceptOffer/KickDoor/KickDoor.jsx';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/the_sister_1/intro" element={<IntroTheSister1/>} />
             <Route path="/the_sister_1/give_food" element={<GiveFood/>} />
             <Route path="/the_sister_1/accept_offer" element={<AcceptOffer/>} />
+            <Route path="/the_sister_1/kick_door" element={<KickDoor/>} />
         </Routes>
       </div>
   );
