@@ -13,25 +13,27 @@ function KickDoor() {
   const scene1 = 'The door broke down';
   const scene2 = 'But the fire is too big, and burned them';
   const scene3 = 'Only ashes remains';
-  const scene4 = 'Dazed and surrounded by flames, the haunting visage of burning dolls paints a surreal nightmare';
+  const scene4 = 'Dazed and surrounded by flames, the hunter awake with the haunting visage of burning dolls';
+  const scene5 = 'Sound echoed "Come and play with me"';
 
-  const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4;
+  const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4 + '\n' + scene5;
 
   const imageBackgrounds = [
     'broke_down.jpg',
     'burned_them.jpg',
     'ashes_remains.jpg',
     'burning_dolls.jpg',
+    'sound_echoes.jpg',
   ];
 
   const choiceText = [
-    // 'Try to kick the door',
-    // 'Jump out of the room',
+    'Play with the dolls',
+    'Run away from them',
   ]
 
   const valueChoice = [
-    // 'kick',
-    // 'jump',
+    'play',
+    'run',
   ]
 
   const hiddenChoice = [
@@ -54,8 +56,8 @@ function KickDoor() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'kick'){
-      navigate('/the_sister_1/kick_door');
+    if(valueChoices === 'play'){
+      navigate('/the_sister_1/play_with_dolls');
     }
   }
 

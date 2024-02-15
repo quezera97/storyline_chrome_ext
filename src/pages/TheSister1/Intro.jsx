@@ -20,9 +20,6 @@ function IntroTheSister1() {
     'ask_food.jpg',
     'people_refuse.jpg',
     'bump_person.jpg',
-    //scene option
-    'person_give_food.jpg',
-    'person_push.jpg',
   ];
 
   const choiceText = [
@@ -62,9 +59,6 @@ function IntroTheSister1() {
         break;
       case 'refuse':
         navigate('/the_sister_1/refuse_to_give');
-        break;
-      case '':
-        // Handle the case when valueChoices is empty
         break;
       default:
         navigate('/');

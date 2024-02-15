@@ -16,9 +16,6 @@ function GiveFood() {
 
   const imageBackgrounds = [
     'offer_shelter.jpg',
-    //scene option
-    'accept_offer.jpg',
-    'reject_offer.jpg',
   ];
 
   const choiceText = [
