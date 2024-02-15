@@ -31,16 +31,18 @@ function IntroForAll() {
 
     
     return (
-        <>
+        <div>
             <div>
                 <EerieButton className="Z-index-topLeft" onClick={handleClick} value="exit" text={'X'}/>
             </div>
-            {
-                showChoices 
-                ? ( navigate('/character') ) 
-                : ( <IntroForAllTextBottomContainer text={storyText} onTextComplete={handleTextComplete} image={imageBackgrounds}/> )
-            }
-        </>
+            <div>
+                {
+                    showChoices 
+                    ? ( navigate('/character') ) 
+                    : ( <IntroForAllTextBottomContainer text={storyText} onTextComplete={handleTextComplete} image={imageBackgrounds}/> )
+                }
+            </div>
+        </div>
     );
 }
 
