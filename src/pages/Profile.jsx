@@ -7,6 +7,7 @@ import InputText from '../components/InputText.js';
 import { FaEdit } from 'react-icons/fa';
 import ClickableIcon from '../components/ClickableIcon.js';
 import EerieButton from '../components/EeerieButton.js';
+import Header from '../components/Header.js';
 import profilePicture from '../assets/img/icon.jpg';
 
 function Profile() {
@@ -41,6 +42,7 @@ function Profile() {
 
     return (
         <>
+            <Header/>
             <Background backgroundImage={require('../assets/img/portfolio_background.jpg')}>
                 <BreakLine quantity={1}/>
                 <ProfilePicture imageUrl={profilePicture}/>

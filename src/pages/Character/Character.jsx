@@ -36,19 +36,23 @@ function Character() {
   const handleSubmit = (e) => {
     const selectedImage = slides[selectedSlideIndex];
 
-    if(selectedImage.includes(includeTheSister1)){
-      navigate('/the_sister_1/intro');
-    }
-    else if(selectedImage.includes(includeTheExecutioner)){
-      navigate('/the_executioner/intro');
-    }
-    else if(selectedImage.includes(includeTheSister2)){
-      navigate('/the_sister_2/intro');
+    if(e === 'choose') {
+      if(selectedImage.includes(includeTheSister1)){
+        navigate('/the_sister_1/intro');
+      }
+      else if(selectedImage.includes(includeTheExecutioner)){
+        navigate('/the_executioner/intro');
+      }
+      else if(selectedImage.includes(includeTheSister2)){
+        navigate('/the_sister_2/intro');
+      }
+      else{
+        navigate('/joy_boy/intro');
+      }
     }
     else{
-      navigate('/joy_boy/intro');
+      navigate('/');
     }
-
   };
 
   return (
@@ -91,7 +95,7 @@ function Character() {
       </Swiper>
       <BreakLine quantity={3}/>
       <div>
-        <EerieButton onClick={handleSubmit} text={'CHOOSE'}/>
+        <EerieButton onClick={handleSubmit} value="choose" text={'CHOOSE'}/>
         <EerieButton onClick={handleSubmit} value="exit" text={'EXIT'}/>
       </div>
     </Background>

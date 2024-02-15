@@ -5,6 +5,7 @@ import Text from '../components/Text.js';
 import Background from '../components/Background.js';
 import EerieButton from '../components/EeerieButton.js';
 import BreakLine from '../components/BreakLine.js';
+import Header from '../components/Header.js';
 import ConfirmationDialog from '../components/ConfirmationDialog.js';
 
 function Settings() {
@@ -44,6 +45,7 @@ function Settings() {
 
   return (
     <>
+      <Header/>
       <Background backgroundImage={require('../assets/img/settings-background.jpg')}>
 
         <ConfirmationDialog

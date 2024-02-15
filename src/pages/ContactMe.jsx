@@ -4,6 +4,7 @@ import TitleText from '../components/Text';
 import InputText from '../components/InputText.js';
 import EerieButton from '../components/EeerieButton.js';
 import AlertDialog from '../components/AlertDialog.js';
+import Header from '../components/Header.js';
 import { useState } from 'react';
 
 
@@ -48,6 +49,7 @@ function ContactMe() {
 
     return (
         <>
+            <Header/>
             <Background backgroundImage={require('../assets/img/contact_me_background.jpg')}>
                 {isAlertOpen && (
                     <AlertDialog isOpen={isAlertOpen} message={alertMessage} onCancel={handleAlertCancel} />
@@ -81,8 +83,8 @@ function ContactMe() {
                 />
                 <BreakLine quantity={1}/>
                 <EerieButton onClick={handleSubmit} text={'Submit'}/>
+                <BreakLine quantity={1}/>
             </Background>
-            <BreakLine quantity={1}/>
         </>
     );
 }

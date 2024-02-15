@@ -1,4 +1,5 @@
 import React from 'react';
+import BreakLine from './BreakLine';
 
 const Background = ({ backgroundImage, children }) => {
   const containerStyle = {
@@ -25,6 +26,7 @@ const Background = ({ backgroundImage, children }) => {
     <div style={containerStyle}>
       <img src={backgroundImage} alt="" style={imageStyle} />
       {children}
+      <BreakLine quantity={1}/>
     </div>
   );
 };

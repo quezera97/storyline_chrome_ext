@@ -7,7 +7,6 @@ import IntroTheSister1 from './pages/TheSister1/Intro.jsx';
 import GiveFood from './pages/TheSister1/GiveFood/GiveFood.jsx';
 import AcceptOffer from './pages/TheSister1/GiveFood/AcceptOffer/AcceptOffer.jsx';
 import Profile from './pages/Profile.jsx';
-import Header from './components/Header.js';
 import ContactMe from './pages/ContactMe.jsx';
 import Project from './pages/Project.jsx';
 import KickDoor from './pages/TheSister1/GiveFood/AcceptOffer/KickDoor/KickDoor.jsx';
@@ -17,17 +16,16 @@ import IntroForAll from './pages/IntroForAll/IntroForAll.jsx';
 function App() {
   return (
     <div className="App">
-        <Header/>
         <Routes>
+            <Route path="/" element={<Dashboard/>} />
             <Route path="/profile" element={<Profile/>} />
             <Route path="/contact_me" element={<ContactMe/>} />
             <Route path="/project" element={<Project/>} />
 
-            <Route path="/" element={<Dashboard/>} />
             <Route path="/settings" element={<Settings/>} />
-            <Route path="/character" element={<Character/>} />
 
             <Route path="/intro" element={<IntroForAll/>} />
+            <Route path="/character" element={<Character/>} />
 
             <Route path="/the_sister_1/intro" element={<IntroTheSister1/>} />
             <Route path="/the_sister_1/give_food" element={<GiveFood/>} />

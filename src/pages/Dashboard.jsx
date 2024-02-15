@@ -5,6 +5,7 @@ import TitleText from '../components/Text';
 import EerieButton from '../components/EeerieButton';
 import Background from '../components/Background';
 import BreakLine from '../components/BreakLine';
+import Header from '../components/Header';
 
 function Dashboard() {
     const navigate = useNavigate();
@@ -36,7 +37,8 @@ function Dashboard() {
     };
 
     return (
-        <>
+        <div>
+            <Header/>
             <Background backgroundImage={require('../assets/img/intro-background.jpg')}>
                 <TitleText className="White-text Eerie-text Title-text" text="~ The ~"/>
                 <TitleText className="Red-text Eerie-text Title-text" text="Mannequinn"/>
@@ -47,7 +49,7 @@ function Dashboard() {
                     <EerieButton onClick={handleClick} value="urlFeedback" text={'Feedback'}/>
                 </div>
             </Background>
-        </>
+        </div>
     );
 }
 
