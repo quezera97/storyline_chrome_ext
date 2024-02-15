@@ -22,7 +22,7 @@ const RadioGroup = ({ children, onSelectedChoice }) => {
   
   const RadioButton = ({ value, label, hidden, selected, onChange }) => {
     return (
-      <div style={{ margin: '10px 0' }}>
+      <div style={{ margin: '10px 20px' , display: 'inline-flex'}}>
         <label style={{ display: 'block' }}>
           <input type="radio" value={value} checked={selected} onChange={onChange} hidden={hidden}/>
           {hidden ? null : label}

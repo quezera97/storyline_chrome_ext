@@ -12,12 +12,14 @@ function KickDoor() {
 
   const scene1 = 'The door broke down';
   const scene2 = 'But the fire is too big, and burned them';
+  const scene3 = 'Only ashes remains';
 
-  const storyText = scene1 + '\n' + scene2;
+  const storyText = scene1 + '\n' + scene2 + '\n' + scene3;
 
   const imageBackgrounds = [
     'broke_down.jpg',
     'burned_them.jpg',
+    'ask_food.jpg',
   ];
 
   const choiceText = [

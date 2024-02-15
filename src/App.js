@@ -11,6 +11,7 @@ import Header from './components/Header.js';
 import ContactMe from './pages/ContactMe.jsx';
 import Project from './pages/Project.jsx';
 import KickDoor from './pages/TheSister1/GiveFood/AcceptOffer/KickDoor/KickDoor.jsx';
+import IntroForAll from './pages/IntroForAll/IntroForAll.jsx';
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
             <Route path="/" element={<Dashboard/>} />
             <Route path="/settings" element={<Settings/>} />
             <Route path="/character" element={<Character/>} />
+
+            <Route path="/intro" element={<IntroForAll/>} />
+
             <Route path="/the_sister_1/intro" element={<IntroTheSister1/>} />
             <Route path="/the_sister_1/give_food" element={<GiveFood/>} />
             <Route path="/the_sister_1/accept_offer" element={<AcceptOffer/>} />

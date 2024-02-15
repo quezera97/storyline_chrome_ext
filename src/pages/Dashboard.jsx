@@ -21,13 +21,10 @@ function Dashboard() {
     const handleClick = (value) => {
         switch (value) {
             case 'start':
-                navigate('/the_sister_1/intro');
+                navigate('/intro');
                 break;
             case 'settings':
                 navigate('/settings');
-                break;
-            case 'character':
-                navigate('/character');
                 break;
             case 'urlFeedback':
                 window.open(urlFeedback, '_blank');
@@ -47,7 +44,6 @@ function Dashboard() {
                 <div style={divOptionStyle}>
                     <EerieButton onClick={handleClick} value="start" text={'Start'}/>
                     <EerieButton onClick={handleClick} value="settings" text={'Settings'}/>
-                    <EerieButton onClick={handleClick} value="character" text={'Character'}/>
                     <EerieButton onClick={handleClick} value="urlFeedback" text={'Feedback'}/>
                 </div>
             </Background>
