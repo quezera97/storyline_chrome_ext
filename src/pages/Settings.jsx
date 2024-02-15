@@ -43,51 +43,54 @@ function Settings() {
   };
 
   return (
-    <Background backgroundImage={require('../assets/img/settings-background.jpg')}>
+    <>
+      <Background backgroundImage={require('../assets/img/settings-background.jpg')}>
 
-      <ConfirmationDialog
-        isOpen={showConfirmation}
-        message="Are you sure you want to save?"
-        onConfirm={() => handleConfirmDialog(true)}
-        onCancel={() => handleConfirmDialog(false)}
-      />
+        <ConfirmationDialog
+          isOpen={showConfirmation}
+          message="Are you sure you want to save?"
+          onConfirm={() => handleConfirmDialog(true)}
+          onCancel={() => handleConfirmDialog(false)}
+        />
 
-      <Text className="White-text Eerie-text Title-text" text="Settings"/>
+        <Text className="White-text Eerie-text Title-text" text="Settings"/>
+        <BreakLine quantity={1}/>
+        <table className='Table-In-Settings'>
+          <thead>
+            <tr>
+              <th scope="col"><Text className="White-text Eerie-text Normal-text" text="Music"/></th>
+              <th scope="col"><Text className="White-text Eerie-text Normal-text" text="Subtitle"/></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <Text className="Red-text Eerie-text Subtitle-text" text={musicValue}/>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value={musicValue}
+                  onChange={handleChangeMusicValue}
+                  className="Eerie-range"
+                  id="eerie-range"
+                />
+              </th>
+              <td>
+                <EerieButton onClick={handleClickSubtitle} value="on" text={'ON'} color={onButtonColor} />
+                <EerieButton onClick={handleClickSubtitle} value="off" text={'OFF'} color={offButtonColor} />
+              </td>
+            </tr>
+            </tbody>
+        </table>
+        <BreakLine quantity={3}/>
+        <div>
+          <EerieButton onClick={handleSubmitSettings} value="save" text={'SAVE'}/>
+          <EerieButton onClick={handleSubmitSettings} value="exit" text={'EXIT'}/>
+        </div>
+      </Background>
       <BreakLine quantity={1}/>
-      <table className='Table-In-Settings'>
-        <thead>
-          <tr>
-            <th scope="col"><Text className="White-text Eerie-text Normal-text" text="Music"/></th>
-            <th scope="col"><Text className="White-text Eerie-text Normal-text" text="Subtitle"/></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">
-              <Text className="Red-text Eerie-text Subtitle-text" text={musicValue}/>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value={musicValue}
-                onChange={handleChangeMusicValue}
-                className="Eerie-range"
-                id="eerie-range"
-              />
-            </th>
-            <td>
-              <EerieButton onClick={handleClickSubtitle} value="on" text={'ON'} color={onButtonColor} />
-              <EerieButton onClick={handleClickSubtitle} value="off" text={'OFF'} color={offButtonColor} />
-            </td>
-          </tr>
-          </tbody>
-      </table>
-      <BreakLine quantity={3}/>
-      <div>
-        <EerieButton onClick={handleSubmitSettings} value="save" text={'SAVE'}/>
-        <EerieButton onClick={handleSubmitSettings} value="exit" text={'EXIT'}/>
-      </div>
-    </Background>
+    </>
   );
 }
 

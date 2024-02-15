@@ -17,11 +17,13 @@ function Project() {
     
 
     return (
-        <Background backgroundImage={require('../assets/img/project_background.jpg')}>
-            <TitleText className="Red-text Eerie-text Normal-text" text="My Projects"/>
-            <TitleText className="White-text Eerie-text Small-text" text="Please Support Me"/>
-            <Grid data={gridData}/>
-        </Background>
+        <>
+            <Background backgroundImage={require('../assets/img/project_background.jpg')}>
+                <TitleText className="Red-text Eerie-text Normal-text" text="My Projects"/>
+                <TitleText className="White-text Eerie-text Small-text" text="Please Support Me"/>
+                <Grid data={gridData}/>
+            </Background>
+        </>
     );
 }
 

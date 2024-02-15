@@ -47,40 +47,43 @@ function ContactMe() {
     };
 
     return (
-        <Background backgroundImage={require('../assets/img/contact_me_background.jpg')}>
-            {isAlertOpen && (
-                <AlertDialog isOpen={isAlertOpen} message={alertMessage} onCancel={handleAlertCancel} />
-            )}
+        <>
+            <Background backgroundImage={require('../assets/img/contact_me_background.jpg')}>
+                {isAlertOpen && (
+                    <AlertDialog isOpen={isAlertOpen} message={alertMessage} onCancel={handleAlertCancel} />
+                )}
+                <BreakLine quantity={1}/>
+                <TitleText className="White-text Eerie-text Subtitle-text" text="Contact Me"/>
+                <BreakLine quantity={1}/>
+                <InputText
+                    id="nameInput"
+                    type="input"
+                    placeholder={'Enter Name'}
+                    width={'45vw'}
+                    maxlength={'20'}
+                />
+                <BreakLine quantity={1}/>
+                <InputText
+                    id="emailInput"
+                    type="input"
+                    placeholder={'Enter Email'}
+                    width={'45vw'}
+                    maxlength={'20'}
+                />
+                <BreakLine quantity={1}/>
+                <InputText
+                    id="messageInput"
+                    type="textarea"
+                    placeholder={'Enter Message'}
+                    height={'20vh'}
+                    width={'45vw'}
+                    maxlength={'250'}
+                />
+                <BreakLine quantity={1}/>
+                <EerieButton onClick={handleSubmit} text={'Submit'}/>
+            </Background>
             <BreakLine quantity={1}/>
-            <TitleText className="White-text Eerie-text Subtitle-text" text="Contact Me"/>
-            <BreakLine quantity={1}/>
-            <InputText
-                id="nameInput"
-                type="input"
-                placeholder={'Enter Name'}
-                width={'45vw'}
-                maxlength={'20'}
-            />
-            <BreakLine quantity={1}/>
-            <InputText
-                id="emailInput"
-                type="input"
-                placeholder={'Enter Email'}
-                width={'45vw'}
-                maxlength={'20'}
-            />
-            <BreakLine quantity={1}/>
-            <InputText
-                id="messageInput"
-                type="textarea"
-                placeholder={'Enter Message'}
-                height={'20vh'}
-                width={'45vw'}
-                maxlength={'250'}
-            />
-            <BreakLine quantity={1}/>
-            <EerieButton onClick={handleSubmit} text={'Submit'}/>
-        </Background>
+        </>
     );
 }
 

@@ -1,34 +1,33 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import TheSister1TextBottomContainer from '../../TheSister1TextBottomContainer';
-import TheSister1ChoiceContainerBottom from '../../TheSister1ChoiceContainerBottom';
-import EerieButton from '../../../../components/EeerieButton';
+import TheSister1TextBottomContainer from '../../../TheSister1TextBottomContainer';
+import TheSister1ChoiceContainerBottom from '../../../TheSister1ChoiceContainerBottom';
+import EerieButton from '../../../../../components/EeerieButton';
 
-function GiveFood() {
+function KickDoor() {
   const navigate = useNavigate();
   const [showChoices, setShowChoices] = useState(false);
   const [valueChoices, setValueChoices] = useState('');
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
 
-  const scene1 = 'Then, the man offers her shelter in his house';
+  const scene1 = 'The door broke down';
+  const scene2 = 'But the fire is too big, and burned them';
 
-  const storyText = scene1;
+  const storyText = scene1 + '\n' + scene2;
 
   const imageBackgrounds = [
-    'offer_shelter.jpg',
-    //scene option
-    'accept_offer.jpg',
-    'reject_offer.jpg',
+    'broke_down.jpg',
+    'burned_them.jpg',
   ];
 
   const choiceText = [
-    'Accept the offer',
-    'Reject the offer',
+    // 'Try to kick the door',
+    // 'Jump out of the room',
   ]
 
   const valueChoice = [
-    'accept',
-    'reject',
+    // 'kick',
+    // 'jump',
   ]
 
   const hiddenChoice = [
@@ -51,8 +50,8 @@ function GiveFood() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'accept'){
-      navigate('/the_sister_1/accept_offer');
+    if(valueChoices === 'kick'){
+      navigate('/the_sister_1/kick_door');
     }
   }
 
@@ -71,4 +70,4 @@ function GiveFood() {
   );
 }
 
-export default GiveFood;
+export default KickDoor;

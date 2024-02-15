@@ -11,7 +11,6 @@ const Background = ({ backgroundImage, children }) => {
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
-    overflow: 'hidden',
   };
 
   return (

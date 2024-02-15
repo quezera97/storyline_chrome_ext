@@ -40,80 +40,83 @@ function Profile() {
 
 
     return (
-        <Background backgroundImage={require('../assets/img/portfolio_background.jpg')}>
-            <BreakLine quantity={1}/>
-            <ProfilePicture imageUrl={profilePicture}/>
-            <BreakLine quantity={1}/>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-                {editingField === 'username' ? (
-                    <>
-                        <InputText
-                            type="input"
-                            value={username}
-                            onChange={handleInputChange}
-                            width={'30vw'}
-                            maxlength={'20'}
-                        />
-                        <EerieButton onClick={handleSave} text={'SAVE'}/>
-                    </>
-                ) : (
-                    <>
+        <>
+            <Background backgroundImage={require('../assets/img/portfolio_background.jpg')}>
+                <BreakLine quantity={1}/>
+                <ProfilePicture imageUrl={profilePicture}/>
+                <BreakLine quantity={1}/>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    {editingField === 'username' ? (
+                        <>
+                            <InputText
+                                type="input"
+                                value={username}
+                                onChange={handleInputChange}
+                                width={'30vw'}
+                                maxlength={'20'}
+                            />
+                            <EerieButton onClick={handleSave} text={'SAVE'}/>
+                        </>
+                    ) : (
+                        <>
+                            <TitleText
+                                className="White-text Eerie-text Normal-text"
+                                text={username}
+                                style={{ marginRight: '10px' }}
+                            />
+                            <ClickableIcon
+                                icon={<FaEdit />}
+                                hasTooltip={true}
+                                tooltipText="Edit Username"
+                                className="custom-class"
+                                style={{ color: 'red', fontSize: '30px', cursor: 'pointer' }}
+                                onClick={() => handleEdit('username')}
+                            />
+                        </>
+                    )}
+                </div>
+                <BreakLine quantity={1}/>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    {editingField === 'shortBio' ? (
+                        <>
+                            <InputText
+                                type="textarea"
+                                value={shortBio}
+                                onChange={handleInputChange}
+                                height={'40vh'}
+                                width={'30vw'}
+                                maxlength={'250'}
+                            />
+                            <EerieButton onClick={handleSave} text={'SAVE'}/>
+                        </>
+                    ) : (
+                        <>
                         <TitleText
-                            className="White-text Eerie-text Normal-text"
-                            text={username}
-                            style={{ marginRight: '10px' }}
-                        />
-                        <ClickableIcon
-                            icon={<FaEdit />}
-                            hasTooltip={true}
-                            tooltipText="Edit Username"
-                            className="custom-class"
-                            style={{ color: 'red', fontSize: '30px', cursor: 'pointer' }}
-                            onClick={() => handleEdit('username')}
-                        />
-                    </>
-                )}
-            </div>
-            <BreakLine quantity={1}/>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-                {editingField === 'shortBio' ? (
-                    <>
-                        <InputText
-                            type="textarea"
-                            value={shortBio}
-                            onChange={handleInputChange}
-                            height={'40vh'}
-                            width={'30vw'}
-                            maxlength={'250'}
-                        />
-                        <EerieButton onClick={handleSave} text={'SAVE'}/>
-                    </>
-                ) : (
-                    <>
-                       <TitleText
-                            className="White-text Eerie-text Small-text"
-                            text={shortBio}
-                            style={{
-                                marginRight: '10px',
-                                border: '2px solid black',
-                                padding: '10px',
-                                width: '600px',
-                            }}
-                        />
+                                className="White-text Eerie-text Small-text"
+                                text={shortBio}
+                                style={{
+                                    marginRight: '10px',
+                                    border: '2px solid black',
+                                    padding: '10px',
+                                    width: '600px',
+                                }}
+                            />
 
-                        <ClickableIcon
-                            icon={<FaEdit />}
-                            hasTooltip={true}
-                            tooltipText="Edit Short Bio"
-                            className="custom-class"
-                            style={{ color: 'red', fontSize: '30px', cursor: 'pointer' }}
-                            onClick={() => handleEdit('shortBio')}
-                        />
-                    </>
-                )}
-            </div>
-           
-        </Background>
+                            <ClickableIcon
+                                icon={<FaEdit />}
+                                hasTooltip={true}
+                                tooltipText="Edit Short Bio"
+                                className="custom-class"
+                                style={{ color: 'red', fontSize: '30px', cursor: 'pointer' }}
+                                onClick={() => handleEdit('shortBio')}
+                            />
+                        </>
+                    )}
+                </div>
+            
+            </Background>
+            <BreakLine quantity={1}/>
+        </>
     );
 }
 

@@ -39,7 +39,8 @@ function Dashboard() {
     };
 
     return (
-        <Background backgroundImage={require('../assets/img/intro-background.jpg')}>
+        <>
+            <Background backgroundImage={require('../assets/img/intro-background.jpg')}>
                 <TitleText className="White-text Eerie-text Title-text" text="~ The ~"/>
                 <TitleText className="Red-text Eerie-text Title-text" text="Mannequinn"/>
                 <BreakLine quantity={2}/>
@@ -50,6 +51,7 @@ function Dashboard() {
                     <EerieButton onClick={handleClick} value="urlFeedback" text={'Feedback'}/>
                 </div>
             </Background>
+        </>
     );
 }
 

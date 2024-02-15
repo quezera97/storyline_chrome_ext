@@ -4,13 +4,13 @@ import Dashboard from './pages/Dashboard.jsx';
 import Settings from './pages/Settings.jsx';
 import Character from './pages/Character/Character.jsx';
 import IntroTheSister1 from './pages/TheSister1/Intro.jsx';
-import GiveFood from './pages/TheSister1/FirstChoice/GiveFood/GiveFood.jsx';
-import AcceptOffer from './pages/TheSister1/FirstChoice/GiveFood/AcceptOffer/AcceptOffer.jsx';
+import GiveFood from './pages/TheSister1/GiveFood/GiveFood.jsx';
+import AcceptOffer from './pages/TheSister1/GiveFood/AcceptOffer/AcceptOffer.jsx';
 import Profile from './pages/Profile.jsx';
 import Header from './components/Header.js';
 import ContactMe from './pages/ContactMe.jsx';
 import Project from './pages/Project.jsx';
-import KickDoor from './pages/TheSister1/FirstChoice/GiveFood/AcceptOffer/KickDoor/KickDoor.jsx';
+import KickDoor from './pages/TheSister1/GiveFood/AcceptOffer/KickDoor/KickDoor.jsx';
 
 
 function App() {
