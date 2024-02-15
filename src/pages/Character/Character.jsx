@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import {useNavigate} from 'react-router-dom';
@@ -21,23 +22,39 @@ import theSister1 from "./assets/theSister1.jpg";
 import theExecutioner from "./assets/theExecutioner.jpg";
 import theSister2 from "./assets/theSister2.jpg";
 
-const slides = [joyBoy, theSister1, theExecutioner, theSister2];
-
 function Character() {
+  const slides = [joyBoy, theSister1, theExecutioner, theSister2];
+
+  const includeTheSister1 = 'theSister1';
+  const includeTheExecutioner = 'theExecutioner';
+  const includeTheSister2 = 'theSister2';
+
+  const [selectedSlideIndex, setSelectedSlideIndex] = useState(0);
+
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    if(e === 'choose') {
-      console.log('choose luh');  
+    const selectedImage = slides[selectedSlideIndex];
+
+    if(selectedImage.includes(includeTheSister1)){
+      navigate('/the_sister_1/intro');
     }
-    
-    navigate('/');
+    else if(selectedImage.includes(includeTheExecutioner)){
+      navigate('/the_executioner/intro');
+    }
+    else if(selectedImage.includes(includeTheSister2)){
+      navigate('/the_sister_2/intro');
+    }
+    else{
+      navigate('/joy_boy/intro');
+    }
+
   };
 
   return (
     <Background backgroundImage={require('./assets/character_backgorund.jpg')}>
       <BreakLine quantity={3}/>
-      <TitleText className="White-text Eerie-text Subtitle-text" text="Choose Your Caharcter's Story"/>
+      <TitleText className="White-text Eerie-text Subtitle-text" text="Choose Your Character's Story"/>
       <Swiper
         modules={[EffectCoverflow, Navigation, Pagination]}
         navigation={{
@@ -58,6 +75,7 @@ function Character() {
           modifier: 1,
           slideShadows: true,
         }}
+        onSlideChange={(swiper) => setSelectedSlideIndex(swiper.activeIndex)}
       >
         {slides?.map((slide, index) => (
           <SwiperSlide key={index} className="slide-inner">
@@ -73,7 +91,7 @@ function Character() {
       </Swiper>
       <BreakLine quantity={3}/>
       <div>
-        <EerieButton onClick={handleSubmit} value="choose" text={'CHOOSE'}/>
+        <EerieButton onClick={handleSubmit} text={'CHOOSE'}/>
         <EerieButton onClick={handleSubmit} value="exit" text={'EXIT'}/>
       </div>
     </Background>

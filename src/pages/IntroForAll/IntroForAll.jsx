@@ -20,29 +20,28 @@ function IntroForAll() {
         'choose_path.jpg',
     ];
     
-      const handleTextComplete = (currentPartIndex) => {
+    const handleTextComplete = (currentPartIndex) => {
         setCurrentPartIndex(currentPartIndex);
         setShowChoices(true);
-      };
+    };
     
-      const handleClick = (e) => {
+    const handleClick = (e) => {
         navigate('/');
-      }
+    }
 
     
-      return (
+    return (
         <>
             <div>
                 <EerieButton className="Z-index-topLeft" onClick={handleClick} value="exit" text={'X'}/>
             </div>
-          {showChoices ? (
-            navigate('/character')
-          ) : (
-            <IntroForAllTextBottomContainer text={storyText} onTextComplete={handleTextComplete} image={imageBackgrounds}/>
-          )}
+            {
+                showChoices 
+                ? ( navigate('/character') ) 
+                : ( <IntroForAllTextBottomContainer text={storyText} onTextComplete={handleTextComplete} image={imageBackgrounds}/> )
+            }
         </>
-      );
-    
+    );
 }
 
 export default IntroForAll;
