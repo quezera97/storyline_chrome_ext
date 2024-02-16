@@ -1,41 +1,39 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
+import TheSister1TextBottomContainer from '../../TheSister1TextBottomContainer';
 import TheSister1ChoiceContainerBottom from '../../TheSister1ChoiceContainerBottom';
 import EerieButton from '../../../../components/EeerieButton';
-import TheSister1TextBottomContainer from '../../TheSister1TextBottomContainer';
 
-function CheckCondition() {
+function KickDoor() {
   const navigate = useNavigate();
   const [showChoices, setShowChoices] = useState(false);
   const [valueChoices, setValueChoices] = useState('');
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
 
-  const scene1 = 'The man pick her up, and rushed to the nearest hospital for treatment';
-  const scene2 = 'He felt guilty and stay with her till she can discharge';
-  const scene3 = 'The next day, the girl woke up';
-  const scene4 = 'The man who stayed beside her all day, said sorry';
-  const scene5 = 'He decided to adopt here as her daughter and promise that he will take care of her';
-  const scene6 = 'BEfore making decision, the girl ask the man to adopt her sister as well. The man nods';
+  const scene1 = 'The door broke down';
+  const scene2 = 'But the fire is too big, and burned them';
+  const scene3 = 'Only ashes remains';
+  const scene4 = 'Dazed and surrounded by flames, the hunter awake with the haunting visage of burning dolls';
+  const scene5 = 'Sound echoed "Come and play with us"';
 
-  const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4 + '\n' + scene5 + '\n' + scene6;
+  const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4 + '\n' + scene5;
 
   const imageBackgrounds = [
-    'pick_her_up.jpg',
-    'stay_with_her.jpg',
-    'woke_up.jpg',
-    'said_sorry.jpg',
-    'adopt_here.jpg',
-    'man_nods.jpg',
+    'broke_down.jpg',
+    'burned_them.jpg',
+    'ashes_remains.jpg',
+    'burning_dolls.jpg',
+    'sound_echoes.jpg',
   ];
 
   const choiceText = [
-    'Accept the offer',
-    'Reject the offer',
+    'Play with the dolls',
+    'Run away from them',
   ]
 
   const valueChoice = [
-    'accept',
-    'reject',
+    'play',
+    'run',
   ]
 
   const hiddenChoice = [
@@ -58,8 +56,8 @@ function CheckCondition() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'accept'){
-      navigate('/the_sister_1/accept_offer');
+    if(valueChoices === 'play'){
+      navigate('/the_sister_1/play_with_dolls');
     }
   }
 
@@ -78,4 +76,4 @@ function CheckCondition() {
   );
 }
 
-export default CheckCondition;
+export default KickDoor;

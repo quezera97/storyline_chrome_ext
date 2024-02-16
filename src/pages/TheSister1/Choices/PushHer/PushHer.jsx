@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import EerieButton from '../../../components/EeerieButton';
-import TheSister1ChoiceContainerBottom from '../TheSister1ChoiceContainerBottom';
-import TheSister1TextBottomContainer from '../TheSister1TextBottomContainer';
+import TheSister1TextBottomContainer from '../../TheSister1TextBottomContainer';
+import TheSister1ChoiceContainerBottom from '../../TheSister1ChoiceContainerBottom';
+import EerieButton from '../../../../components/EeerieButton';
 
 function PushHer() {
   const navigate = useNavigate();

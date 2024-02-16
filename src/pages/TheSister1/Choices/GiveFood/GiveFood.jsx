@@ -1,39 +1,31 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import TheSister1TextBottomContainer from '../../../TheSister1TextBottomContainer';
-import TheSister1ChoiceContainerBottom from '../../../TheSister1ChoiceContainerBottom';
-import EerieButton from '../../../../../components/EeerieButton';
+import TheSister1TextBottomContainer from '../../TheSister1TextBottomContainer';
+import TheSister1ChoiceContainerBottom from '../../TheSister1ChoiceContainerBottom';
+import EerieButton from '../../../../components/EeerieButton';
 
-function KickDoor() {
+function GiveFood() {
   const navigate = useNavigate();
   const [showChoices, setShowChoices] = useState(false);
   const [valueChoices, setValueChoices] = useState('');
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
 
-  const scene1 = 'The door broke down';
-  const scene2 = 'But the fire is too big, and burned them';
-  const scene3 = 'Only ashes remains';
-  const scene4 = 'Dazed and surrounded by flames, the hunter awake with the haunting visage of burning dolls';
-  const scene5 = 'Sound echoed "Come and play with us"';
+  const scene1 = 'Then, the man offers her shelter in his house';
 
-  const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4 + '\n' + scene5;
+  const storyText = scene1;
 
   const imageBackgrounds = [
-    'broke_down.jpg',
-    'burned_them.jpg',
-    'ashes_remains.jpg',
-    'burning_dolls.jpg',
-    'sound_echoes.jpg',
+    'offer_shelter.jpg',
   ];
 
   const choiceText = [
-    'Play with the dolls',
-    'Run away from them',
+    'Accept the offer',
+    'Reject the offer',
   ]
 
   const valueChoice = [
-    'play',
-    'run',
+    'accept',
+    'reject',
   ]
 
   const hiddenChoice = [
@@ -56,8 +48,8 @@ function KickDoor() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'play'){
-      navigate('/the_sister_1/play_with_dolls');
+    if(valueChoices === 'accept'){
+      navigate('/the_sister_1/accept_offer');
     }
   }
 
@@ -76,4 +68,4 @@ function KickDoor() {
   );
 }
 
-export default KickDoor;
+export default GiveFood;

@@ -4,17 +4,17 @@ import Dashboard from './pages/Dashboard.jsx';
 import Settings from './pages/Settings.jsx';
 import Character from './pages/Character/Character.jsx';
 import IntroTheSister1 from './pages/TheSister1/Intro.jsx';
-import GiveFood from './pages/TheSister1/GiveFood/GiveFood.jsx';
-import AcceptOffer from './pages/TheSister1/GiveFood/AcceptOffer/AcceptOffer.jsx';
+import GiveFood from './pages/TheSister1/Choices/GiveFood/GiveFood.jsx';
+import AcceptOffer from './pages/TheSister1/Choices/AcceptOffer/AcceptOffer.jsx';
 import Profile from './pages/Profile.jsx';
 import ContactMe from './pages/ContactMe.jsx';
 import Project from './pages/Project.jsx';
-import KickDoor from './pages/TheSister1/GiveFood/AcceptOffer/KickDoor/KickDoor.jsx';
+import KickDoor from './pages/TheSister1/Choices/KickDoor/KickDoor.jsx';
 import IntroForAll from './pages/IntroForAll/IntroForAll.jsx';
-import PlayWithDolls from './pages/TheSister1/GiveFood/AcceptOffer/KickDoor/PlayWithDolls/PlayWithDolls.jsx';
+import PlayWithDolls from './pages/TheSister1/Choices/PlayWithDolls/PlayWithDolls.jsx';
 import EndingForAll from './pages/EndingForAll/EndingForAll.jsx';
-import PushHer from './pages/TheSister1/PushHer/PushHer.jsx';
-import CheckCondition from './pages/TheSister1/PushHer/CheckCondition/CheckCondition.jsx';
+import PushHer from './pages/TheSister1/Choices/PushHer/PushHer.jsx';
+import CheckCondition from './pages/TheSister1/Choices/CheckCondition/CheckCondition.jsx';
 
 
 function App() {
