@@ -24,8 +24,8 @@ function CheckCondition() {
   const imageBackgrounds = [
     'pick_her_up.jpg',
     'stay_with_her.jpg',
-    'woke_up.jpg',
-    'said_sorry.jpg',
+    'girl_woke_up.jpg',
+    'calm_and_apologize_her.jpg',
     'ask_for_her_family.jpg',
     'parent_dead.jpg',
     'live_near_sewage_tunnel.jpg',

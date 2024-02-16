@@ -10,16 +10,16 @@ function PushHer() {
   const [valueChoices, setValueChoices] = useState('');
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
 
-  const scene1 = 'The girl instantenously fell down to the bumpy rocked road';
-  const scene2 = 'Blood flow from her head';
+  const scene1 = 'The girl fell down to the bumpy rocked road';
+  const scene2 = 'The girls faint, due to her head hit the road';
   const scene3 = 'All the passerby go and check her condition';
 
   const storyText = scene1 + '\n' + scene2 + '\n' + scene3;
 
   const imageBackgrounds = [
     'fall_down.jpg',
-    'blood_flow.jpg',
-    'check.jpg',
+    'girl_faint.jpg',
+    'passerby_check.jpg',
   ];
 
   const choiceText = [
@@ -53,7 +53,7 @@ function PushHer() {
 
   const submitChoice = () => {
     if(valueChoices === 'check'){
-      navigate('/the_sister_1/accept_offer');
+      navigate('/the_sister_1/check_condition');
     }
   }
 
