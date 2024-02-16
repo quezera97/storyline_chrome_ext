@@ -19,10 +19,8 @@ const IntroForAllTextBottomContainer = ({ text, onTextComplete, image }) => {
 
   const handleContainerClick = () => {
     if (currentPartIndex < storyParts.length - 1) {
-      // Increment currentPartIndex if there are more story parts
       setCurrentPartIndex(currentPartIndex + 1);
     } else {
-      // Call the onTextComplete function when the text is complete
       onTextComplete(currentPartIndex);
     }
   };

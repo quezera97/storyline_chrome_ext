@@ -11,6 +11,7 @@ import ContactMe from './pages/ContactMe.jsx';
 import Project from './pages/Project.jsx';
 import KickDoor from './pages/TheSister1/GiveFood/AcceptOffer/KickDoor/KickDoor.jsx';
 import IntroForAll from './pages/IntroForAll/IntroForAll.jsx';
+import PlayWithDolls from './pages/TheSister1/GiveFood/AcceptOffer/KickDoor/PlayWithDolls/PlayWithDolls.jsx';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/the_sister_1/give_food" element={<GiveFood/>} />
             <Route path="/the_sister_1/accept_offer" element={<AcceptOffer/>} />
             <Route path="/the_sister_1/kick_door" element={<KickDoor/>} />
+            <Route path="/the_sister_1/play_with_dolls" element={<PlayWithDolls/>} />
         </Routes>
       </div>
   );

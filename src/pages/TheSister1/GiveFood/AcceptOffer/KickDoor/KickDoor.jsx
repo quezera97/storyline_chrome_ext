@@ -14,7 +14,7 @@ function KickDoor() {
   const scene2 = 'But the fire is too big, and burned them';
   const scene3 = 'Only ashes remains';
   const scene4 = 'Dazed and surrounded by flames, the hunter awake with the haunting visage of burning dolls';
-  const scene5 = 'Sound echoed "Come and play with me"';
+  const scene5 = 'Sound echoed "Come and play with us"';
 
   const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4 + '\n' + scene5;
 
