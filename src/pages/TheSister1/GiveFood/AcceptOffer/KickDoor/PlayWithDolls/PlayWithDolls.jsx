@@ -39,7 +39,7 @@ function PlayWithDolls() {
       <div>
         <EerieButton className="Z-index-topLeft" onClick={handleClick} value="exit" text={'X'}/>
       </div>
-      {showChoices ? navigate('/') : (
+      {showChoices ? navigate('/ending') : (
         <TheSister1TextBottomContainer text={storyText} onTextComplete={handleTextComplete} image={imageBackgrounds}/>
       )}
     </>

@@ -29,7 +29,7 @@ function IntroTheSister1() {
 
   const valueChoice = [
     'give',
-    'refuse',
+    'push',
   ]
 
   const hiddenChoice = [
@@ -57,8 +57,8 @@ function IntroTheSister1() {
       case 'give':
         navigate('/the_sister_1/give_food');
         break;
-      case 'refuse':
-        navigate('/the_sister_1/refuse_to_give');
+      case 'push':
+        navigate('/the_sister_1/push_her');
         break;
       default:
         navigate('/');

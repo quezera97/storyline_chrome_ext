@@ -17,13 +17,14 @@ import TitleText from '../../components/Text.js';
 import EerieButton from "../../components/EeerieButton.js";
 import BreakLine from "../../components/BreakLine.js";
 
-import joyBoy from "./assets/joyBoy.jpg";
+// import joyBoy from "./assets/joyBoy.jpg";
 import theSister1 from "./assets/theSister1.jpg";
-import theExecutioner from "./assets/theExecutioner.jpg";
-import theSister2 from "./assets/theSister2.jpg";
+// import theExecutioner from "./assets/theExecutioner.jpg";
+// import theSister2 from "./assets/theSister2.jpg";
 
 function Character() {
-  const slides = [joyBoy, theSister1, theExecutioner, theSister2];
+  const slides = [theSister1];
+  // const slides = [joyBoy, theSister1, theExecutioner, theSister2];
 
   const includeTheSister1 = 'theSister1';
   const includeTheExecutioner = 'theExecutioner';

@@ -11,8 +11,14 @@ const TheSister1ChoiceContainerBottom = ({ image, imageIndex, text, value, hidde
             case 'give':
                 setImagePath('person_give_food.jpg');
                 break;
-            case 'refuse':
+            case 'push':
                 setImagePath('person_push.jpg');
+                break;
+            case 'check':
+                setImagePath('check_condition.jpg');
+                break;
+            case 'fled':
+                setImagePath('fled_scene.jpg');
                 break;
             case 'accept':
                 setImagePath('accept_offer.jpg');
