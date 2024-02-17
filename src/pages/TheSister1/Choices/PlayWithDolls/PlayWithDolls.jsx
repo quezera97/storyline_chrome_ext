@@ -8,7 +8,7 @@ function PlayWithDolls() {
   const [showChoices, setShowChoices] = useState(false);
   const [, setCurrentPartIndex] = useState(0);
 
-  const scene1 = 'All of the dolss were very happy, because nobody want to play with them';
+  const scene1 = 'All of the dolls were very happy, because nobody want to play with them';
   const scene2 = 'And one particular doll, mix feeling joy and sad';
   const scene3 = 'The hunter realized and catch the doll, saying "I found you"';
   const scene4 = 'The doll smile to him and melts away revealing a key';

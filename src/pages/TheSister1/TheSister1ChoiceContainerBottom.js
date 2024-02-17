@@ -7,36 +7,43 @@ const TheSister1ChoiceContainerBottom = ({ image, imageIndex, text, value, hidde
 
     const handleChoiceSelect = (selectedValue) => {
         onChoiceSelect(selectedValue);
+        
         switch (selectedValue) {
-            case 'give':
+            case 'person_give_food':
                 setImagePath('person_give_food.jpg');
                 break;
-            case 'push':
+            case 'person_push':
                 setImagePath('person_push.jpg');
                 break;
-            case 'check':
+            case 'check_condition':
                 setImagePath('check_condition.jpg');
                 break;
-            case 'fled':
+            case 'fled_scene':
                 setImagePath('fled_scene.jpg');
                 break;
-            case 'accept':
-                setImagePath('accept_offer.jpg');
+            case 'accept_offer_at_street':
+                setImagePath('accept_offer_at_street.jpg');
                 break;
-            case 'reject':
-                setImagePath('reject_offer.jpg');
+            case 'reject_offer_at_street':
+                setImagePath('reject_offer_at_street.jpg');
                 break;
-            case 'kick':
+            case 'accept_offer_at_hospital':
+                setImagePath('accept_offer_at_hospital.jpg');
+                break;
+            case 'reject_offer_at_hospital':
+                setImagePath('reject_offer_at_hospital.jpg');
+                break;
+            case 'kick_door':
                 setImagePath('kick_door.jpg');
                 break;
-            case 'jump':
+            case 'jump_room':
                 setImagePath('jump_room.jpg');
                 break;
-            case 'play':
+            case 'play_with_dolls':
                 setImagePath('play_with_dolls.jpg');
                 break;
-            case 'run':
-                setImagePath('run_away.jpg');
+            case 'run_away_from_dolls':
+                setImagePath('run_away_from_dolls.jpg');
                 break;
             default:
                 setImagePath('black_background.jpg');

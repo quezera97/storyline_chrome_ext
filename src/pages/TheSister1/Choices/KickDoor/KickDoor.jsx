@@ -32,8 +32,8 @@ function KickDoor() {
   ]
 
   const valueChoice = [
-    'play',
-    'run',
+    'play_with_dolls',
+    'run_away_from_dolls',
   ]
 
   const hiddenChoice = [
@@ -56,8 +56,15 @@ function KickDoor() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'play'){
-      navigate('/the_sister_1/play_with_dolls');
+    switch (valueChoices) {
+      case 'play_with_dolls':
+        navigate('/the_sister_1/play_with_dolls');
+        break;
+      case 'run_away_from_dolls':
+        navigate('/the_sister_1/run_away_from_dolls');
+        break;
+      default:
+        navigate('/');
     }
   }
 

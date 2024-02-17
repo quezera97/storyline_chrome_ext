@@ -38,8 +38,8 @@ function CheckCondition() {
   ]
 
   const valueChoice = [
-    'accept',
-    'reject',
+    'accept_offer_at_hospital',
+    'reject_offer_at_hospital',
   ]
 
   const hiddenChoice = [
@@ -62,8 +62,15 @@ function CheckCondition() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'accept'){
-      navigate('/the_sister_1/accept_offer');
+    switch (valueChoices) {
+      case 'accept_offer_at_hospital':
+        navigate('/the_sister_1/accept_offer');
+        break;
+      case 'reject_offer_at_hospital':
+        navigate('/the_sister_1/reject_offer');
+        break;
+      default:
+        navigate('/');
     }
   }
 

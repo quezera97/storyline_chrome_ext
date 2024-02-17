@@ -28,8 +28,8 @@ function IntroTheSister1() {
   ]
 
   const valueChoice = [
-    'give',
-    'push',
+    'person_give_food',
+    'person_push',
   ]
 
   const hiddenChoice = [
@@ -54,10 +54,10 @@ function IntroTheSister1() {
   
   const submitChoice = () => {
     switch (valueChoices) {
-      case 'give':
+      case 'person_give_food':
         navigate('/the_sister_1/give_food');
         break;
-      case 'push':
+      case 'person_push':
         navigate('/the_sister_1/push_her');
         break;
       default:

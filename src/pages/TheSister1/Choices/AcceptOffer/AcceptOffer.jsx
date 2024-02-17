@@ -38,9 +38,6 @@ function AcceptOffer() {
     'knights_storm_in.jpg',
     'throw_torch.jpg',
     'fire_spread.jpg',
-    //scene option
-    'kick_door.jpg',
-    'jump_room.jpg',
   ];
 
   const choiceText = [
@@ -49,8 +46,8 @@ function AcceptOffer() {
   ]
 
   const valueChoice = [
-    'kick',
-    'jump',
+    'kick_door',
+    'jump_room',
   ]
 
   const hiddenChoice = [
@@ -73,8 +70,15 @@ function AcceptOffer() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'kick'){
-      navigate('/the_sister_1/kick_door');
+    switch (valueChoices) {
+      case 'kick_door':
+        navigate('/the_sister_1/kick_door');
+        break;
+      case 'jump_room':
+        navigate('/the_sister_1/jump_room');
+        break;
+      default:
+        navigate('/');
     }
   }
 

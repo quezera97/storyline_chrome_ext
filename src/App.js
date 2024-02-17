@@ -21,24 +21,23 @@ function App() {
   return (
     <div className="App">
         <Routes>
+            {/* Navbar & Dashboard */}
             <Route path="/" element={<Dashboard/>} />
             <Route path="/profile" element={<Profile/>} />
             <Route path="/contact_me" element={<ContactMe/>} />
             <Route path="/project" element={<Project/>} />
-
             <Route path="/settings" element={<Settings/>} />
 
+            {/* Same Page For All */}
             <Route path="/intro" element={<IntroForAll/>} />
             <Route path="/ending" element={<EndingForAll/>} />
             <Route path="/character" element={<Character/>} />
 
+            {/* The Sister Sequel */}
             <Route path="/the_sister_1/intro" element={<IntroTheSister1/>} />
-            
             <Route path="/the_sister_1/give_food" element={<GiveFood/>} />
             <Route path="/the_sister_1/push_her" element={<PushHer/>} />
-
             <Route path="/the_sister_1/check_condition" element={<CheckCondition/>} />
-
             <Route path="/the_sister_1/accept_offer" element={<AcceptOffer/>} />
             <Route path="/the_sister_1/kick_door" element={<KickDoor/>} />
             <Route path="/the_sister_1/play_with_dolls" element={<PlayWithDolls/>} />

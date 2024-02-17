@@ -28,8 +28,8 @@ function PushHer() {
   ]
 
   const valueChoice = [
-    'check',
-    'fled',
+    'check_condition',
+    'fled_scene',
   ]
 
   const hiddenChoice = [
@@ -51,9 +51,17 @@ function PushHer() {
     navigate('/');
   }
 
+  
   const submitChoice = () => {
-    if(valueChoices === 'check'){
-      navigate('/the_sister_1/check_condition');
+    switch (valueChoices) {
+      case 'check_condition':
+        navigate('/the_sister_1/check_condition');
+        break;
+      case 'fled_scene':
+        navigate('/the_sister_1/fled_scene');
+        break;
+      default:
+        navigate('/');
     }
   }
 

@@ -24,8 +24,8 @@ function GiveFood() {
   ]
 
   const valueChoice = [
-    'accept',
-    'reject',
+    'accept_offer_at_street',
+    'reject_offer_at_street',
   ]
 
   const hiddenChoice = [
@@ -48,8 +48,15 @@ function GiveFood() {
   }
 
   const submitChoice = () => {
-    if(valueChoices === 'accept'){
-      navigate('/the_sister_1/accept_offer');
+    switch (valueChoices) {
+      case 'accept_offer_at_street':
+        navigate('/the_sister_1/accept_offer');
+        break;
+      case 'reject_offer_at_street':
+        navigate('/the_sister_1/reject_offer');
+        break;
+      default:
+        navigate('/');
     }
   }
 
