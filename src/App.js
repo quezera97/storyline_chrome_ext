@@ -15,6 +15,8 @@ import PlayWithDolls from './pages/TheSister1/Choices/PlayWithDolls/PlayWithDoll
 import EndingForAll from './pages/EndingForAll/EndingForAll.jsx';
 import PushHer from './pages/TheSister1/Choices/PushHer/PushHer.jsx';
 import CheckCondition from './pages/TheSister1/Choices/CheckCondition/CheckCondition.jsx';
+import RejectOffer from './pages/TheSister1/Choices/RejectOffer/RejectOffer.jsx';
+import RunAway from './pages/TheSister1/Choices/RunAway/RunAway.jsx';
 
 
 function App() {
@@ -38,7 +40,9 @@ function App() {
             <Route path="/the_sister_1/give_food" element={<GiveFood/>} />
             <Route path="/the_sister_1/push_her" element={<PushHer/>} />
             <Route path="/the_sister_1/check_condition" element={<CheckCondition/>} />
+            <Route path="/the_sister_1/run_away" element={<RunAway/>} />
             <Route path="/the_sister_1/accept_offer" element={<AcceptOffer/>} />
+            <Route path="/the_sister_1/reject_offer" element={<RejectOffer/>} />
             <Route path="/the_sister_1/kick_door" element={<KickDoor/>} />
             <Route path="/the_sister_1/play_with_dolls" element={<PlayWithDolls/>} />
         </Routes>

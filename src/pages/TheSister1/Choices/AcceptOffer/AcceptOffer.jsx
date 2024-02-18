@@ -10,21 +10,20 @@ function AcceptOffer() {
   const [valueChoices, setValueChoices] = useState('');
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
 
-  const scene1 = 'The man show his big house around';
+  const scene1 = 'The man very happy and the man show his big house around';
   const scene2 = 'Then, he invite her to eat with other poor children in the dining room';
   const scene3 = 'Suddenly all of the children fell asleep while eating';
   const scene4 = '..................................      ............................    ....................';
   const scene5 = 'The girl woke up with other children in a locked room';
-  const scene6 = 'One by one, the children brought out from the room';
-  const scene7 = 'Rumors said that the plagues happened in the city were due to the children, who have been called the Children of the Witches';
-  const scene8 = 'Because of that, the children are sacrificed to the false Gods';
-  const scene9 = 'Suddenly, a group of knights stormed the place, killing the heretics';
-  const scene10 = 'While subjugating them, one of heretics throw a torch, resulting the place burned down';
-  const scene11 = 'All of heretics are dead, and some of the knights made out alive. Leaving the children locked in the room';
+  const scene6 = 'Rumors said that the plagues happened in the city were due to the children, who have been called the Children of the Witches';
+  const scene7 = 'Because of that, the kidnapped children are sacrificed to the false Gods';
+  const scene8 = 'Suddenly, a group of knights stormed the place, killing the heretics';
+  const scene9 = 'While subjugating them, one of heretics throw a torch, resulting the place burned down';
+  const scene10 = 'All of heretics are dead, and some of the knights made out alive. Leaving the children locked in the room';
 
   const storyText = scene1 + '\n' + scene2 + '\n' + scene3 + '\n' + scene4 + '\n' + scene5 
                     + '\n' + scene6 + '\n' + scene7 + '\n' + scene8 + '\n' + scene9 + '\n' 
-                    + scene10 + '\n' + scene11;
+                    + scene10 ;
 
   const imageBackgrounds = [
     'show_house.jpg',
@@ -32,7 +31,6 @@ function AcceptOffer() {
     'fell_asleep.jpg',
     'black_background.jpg',
     'woke_up.jpg',
-    'brought_out.jpg',
     'rumors.jpg',
     'sacrificed.jpg',
     'knights_storm_in.jpg',
